@@ -1,0 +1,3783 @@
+{
+  "Name": "FF76_75",
+  "ConfigFiles": [
+    {
+      "Label": "FF76_75",
+      "FileName": "C:\\Users\\pierr\\Documents\\Mobiflight\\FF76_75.mcc",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/spd_act"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Value",
+            "Address": "Mach Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Value",
+          "GUID": "47c300d4-97be-47b9-ac36-2abe60287905",
+          "Active": true,
+          "Name": "Airspeed_Mach_Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "80c60416-8281-42ed-8d51-7f3f345e0b3d",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 3)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/hdg_act"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 411.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Value",
+            "Address": "Heading Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Value",
+          "GUID": "d8b9a2f0-8561-40bb-8361-3ebe830f12c6",
+          "Active": true,
+          "Name": "Heading Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/spd_act"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Value",
+            "Address": "Speed Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Value",
+          "GUID": "789533a0-83af-4527-b46e-6b8e0c82983e",
+          "Active": true,
+          "Name": "Airspeed Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "80c60416-8281-42ed-8d51-7f3f345e0b3d",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/alt_act"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Value",
+            "Address": "Altitude Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Value",
+          "GUID": "bb6d7b17-472a-4f9e-a0be-3dcdab5a0f87",
+          "Active": true,
+          "Name": "Altitude Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/vs_act"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Value",
+            "Address": "VS Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Value",
+          "GUID": "7551fe4a-3470-4bd4-b1f5-2b758f21f281",
+          "Active": true,
+          "Name": "V/S Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "7acc29fd-1398-4575-bbb3-155f54c2a792",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Dot",
+            "Address": "Altitude Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Dot",
+          "GUID": "6ea0f8bf-9e45-4f7a-a267-89dec60ff74f",
+          "Active": true,
+          "Name": "VNAV-Mode Dot",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(/=1||#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "09ef4445-b3fb-437f-be3f-751041304a2a",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "dc4848a4-604f-479c-b110-171efb6ec48e",
+              "Placeholder": "/",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Dot",
+            "Address": "Speed Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Dot",
+          "GUID": "a573153d-1e94-4038-9134-323522dab429",
+          "Active": true,
+          "Name": "SPD Managed Dot",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=0,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "b62e76c5-5407-4ca3-8329-117c9a84ff22",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/roll_mode_engaged"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Dot",
+            "Address": "Heading Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Dot",
+          "GUID": "d14f582f-26a0-4382-bba0-f5c93288218b",
+          "Active": true,
+          "Name": "HDG/LNAV Dot",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(/=1||#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "2774255b-0468-4138-bbaf-afeef166c169",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "84acfa24-477d-4052-b05f-718688ea02b2",
+              "Placeholder": "/",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Dashes On/Off",
+            "Address": "Speed Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Dashes On/Off",
+          "GUID": "80c60416-8281-42ed-8d51-7f3f345e0b3d",
+          "Active": true,
+          "Name": "SPD_Dashed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=0,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "b62e76c5-5407-4ca3-8329-117c9a84ff22",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/mcp/vs/label"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Dashes On/Off",
+            "Address": "VS Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Dashes On/Off",
+          "GUID": "7acc29fd-1398-4575-bbb3-155f54c2a792",
+          "Active": true,
+          "Name": "VS_Dashed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1,0,1)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/airspeed_is_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Mode On/Off",
+            "Address": "Mach Mode On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Mode On/Off",
+          "GUID": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+          "Active": true,
+          "Name": "IAS/Mach Mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "lights/glareshield1_rhe"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LCD Percentage",
+            "Address": "LCD Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LCD Percentage",
+          "GUID": "0f68d5c4-07a0-42a9-b77c-25a8af048cc6",
+          "Active": true,
+          "Name": "LCD_Brightness USE OH GLARESHIELD KNOB!!!",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*100",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "abacc5a7-e75c-4e90-99ba-43914c346a4a",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "lights/panel_rhe"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Backlight Percentage",
+            "Address": "Backlight Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Backlight Percentage",
+          "GUID": "bfed4f10-9ea2-4688-bc75-a4838d58bab2",
+          "Active": true,
+          "Name": "Backlight_Brightness",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*50*#",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "abacc5a7-e75c-4e90-99ba-43914c346a4a",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/lamp/10"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LOC",
+            "Pin": "LOC",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "LOC",
+          "GUID": "e743a58c-542e-4f44-a7e1-20d8c8c16cd0",
+          "Active": true,
+          "Name": "LOC LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=0.875,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/lamp/12"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP1",
+            "Pin": "AP1",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP1",
+          "GUID": "ae372f4d-dae7-451c-a960-c72c0e767877",
+          "Active": true,
+          "Name": "AP1 LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/lamp/14"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP2",
+            "Pin": "AP2",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP2",
+          "GUID": "a4342775-cb21-4e05-92f6-6fc956711a45",
+          "Active": true,
+          "Name": "AP2 LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/at_servos_is_active"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 100.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "ATHR",
+            "Pin": "ATHR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ATHR",
+          "GUID": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+          "Active": true,
+          "Name": "ATHR LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/pitch_mode_armed"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "APPR",
+            "Pin": "APPR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "APPR",
+          "GUID": "81f213df-c20f-45a8-bc0a-5e8f934d84bf",
+          "Active": true,
+          "Name": "APPR LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=7,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/lamp/3"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Dashes On/Off",
+            "Address": "Heading Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Dashes On/Off",
+          "GUID": "b94144da-d636-4747-88d3-c36fe8ce836e",
+          "Active": false,
+          "Name": "Undefinied",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=0.875,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/heading_mag"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "TRK Value",
+            "Address": "TRK Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "TRK Value",
+          "GUID": "f072b5e5-c6ed-4a74-afb9-0426d39ba482",
+          "Active": false,
+          "Name": "Undefinied",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "9325e400-aaee-4187-b278-2c562f14d7a5",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "b94144da-d636-4747-88d3-c36fe8ce836e",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LED Percentage",
+            "Address": "LED Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LED Percentage",
+          "GUID": "9325e400-aaee-4187-b278-2c562f14d7a5",
+          "Active": true,
+          "Name": "LED Indicators",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=1,100,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "abacc5a7-e75c-4e90-99ba-43914c346a4a",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "anim/14/button"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "abacc5a7-e75c-4e90-99ba-43914c346a4a",
+          "Active": true,
+          "Name": "BATTERY ON/OFF",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/fd1Switcher"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "b6512e39-e1fc-4206-afb0-651020745def",
+          "Active": true,
+          "Name": "FD1_Off",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/AP/fd2Switcher"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "8d9b3b9b-b9f0-45ba-9dec-8674a8f65321",
+          "Active": true,
+          "Name": "FD2_Off",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/pitch_mode_engaged"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "09ef4445-b3fb-437f-be3f-751041304a2a",
+          "Active": true,
+          "Name": "VNAV Pitch Mode Engaged",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($>=4&&$<=6,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/pitch_mode_armed"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "dc4848a4-604f-479c-b110-171efb6ec48e",
+          "Active": true,
+          "Name": "VNAV Pitch Mode Armed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=6,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/roll_mode_armed"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "84acfa24-477d-4052-b05f-718688ea02b2",
+          "Active": true,
+          "Name": "LNAV Roll Mode Armed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=2,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/ap/roll_mode_engaged"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "2774255b-0468-4138-bbaf-afeef166c169",
+          "Active": true,
+          "Name": "LNAV Roll Mode Engaged",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=2,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "757Avionics/mcp/speed/label"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "b62e76c5-5407-4ca3-8329-117c9a84ff22",
+          "Active": true,
+          "Name": "SPD Display Label",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1||$=2,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/altUP",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 19",
+          "GUID": "b35697a0-a43f-491a-a5cd-6bc2619299c2",
+          "Active": true,
+          "Name": "MCP Altitude Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/altDN",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "982c5fcf-2346-44c5-a34d-c6b613b8a8c6",
+          "Active": true,
+          "Name": "MCP Altitude Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 26",
+          "GUID": "76af4f96-4ea5-4c04-b921-320e792710f7",
+          "Active": true,
+          "Name": "EFIS MODERN ND-Display ARC-Mode",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 27",
+          "GUID": "ccffaaca-2cee-4eb1-82cb-1c7e253c8769",
+          "Active": true,
+          "Name": "EFIS MODERN ND-Display PLN-Mode",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/desengageLever_button",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "1087ec3c-bc17-43f1-861a-e4ada0404558",
+          "Active": true,
+          "Name": "MCP AP DISENGAGE Lever",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/appButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "bc166695-4335-4821-a6b8-3d7c94a01afa",
+          "Active": true,
+          "Name": "MCP APP Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/vnavButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "7233d3be-67d6-439a-810e-4e77bd09fba0",
+          "Active": true,
+          "Name": "MCP VNAV ON",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/flchButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "39328a45-a41f-4d38-a02d-14f2dd040111",
+          "Active": true,
+          "Name": "MCP FLCH ON",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/vviUP",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "86fd34ea-a165-4098-adc5-8dbcf1bb9112",
+          "Active": true,
+          "Name": "MCP V/S Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/vviDN",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "a7a0eed0-c1ae-4472-992c-038bc43f29a2",
+          "Active": true,
+          "Name": "MCP V/S Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/vviButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "54f6f885-05cb-4291-92bf-869c3c9761cd",
+          "Active": true,
+          "Name": "MCP V/S ON",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/altHoldButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 24",
+          "GUID": "97d0ee53-aabb-49b1-8bb1-64f76493f7ea",
+          "Active": true,
+          "Name": "MCP Altitude HOLD Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/hdgUP",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "af647ace-ac11-490f-a3db-2d50fe4ac60b",
+          "Active": true,
+          "Name": "MCP HDG Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/hdgDN",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "cf1f5d3e-892c-42a8-a4ed-59947bad885f",
+          "Active": true,
+          "Name": "MCP HDG Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/lnavButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "146de7fb-9d13-45f3-b918-01de6581b722",
+          "Active": true,
+          "Name": "MCP LNAV ON/OFF",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/hdgHoldButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "4ebcf744-ffcf-47b6-8806-4606f75eb534",
+          "Active": true,
+          "Name": "MCP HDG HOLD",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/spdUP",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "39c050e0-7b9a-4b3a-9a63-2a5f69e12a1a",
+          "Active": true,
+          "Name": "MCP SPD Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/spdDN",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "af9e86bf-f55e-42f8-a952-201b1773746d",
+          "Active": true,
+          "Name": "MCP SPD Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/spdButton_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "ac8119be-e39d-4c98-ba57-3756ee89b5ad",
+          "Active": true,
+          "Name": "MCP SPD Managed",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/spdConfButton_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "aa8aa94b-f794-4a15-8ff0-469d98ca776d",
+          "Active": true,
+          "Name": "MCP SPD INTV",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/iasmach_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "eb7b79e7-e1db-4b19-9d9d-073f1fec7312",
+          "Active": true,
+          "Name": "MCP SPD/Mach Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/locButton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "da954256-f6fb-4ce2-8ef5-2299b19dab63",
+          "Active": true,
+          "Name": "MCP LOC Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/CMD_L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "5a82b3c7-945c-48ca-9665-2e9ff6c6800c",
+          "Active": true,
+          "Name": "MCP CMD-L On",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/comm/AP/CMD_R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 5",
+          "GUID": "933dc620-04a9-49c9-b36a-9c605d69049b",
+          "Active": true,
+          "Name": "MCP CMD-R On",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/hdgConfButton_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 3",
+          "GUID": "1687a12e-8910-479e-9960-43d61d8039c5",
+          "Active": true,
+          "Name": "MCP HDG Select Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/atSwitcher_trigger",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "55e7445b-853f-4e13-bc8d-7fd62ec818de",
+          "Active": true,
+          "Name": "MCP A/T ARMED ON/OFF",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/fd1Switcher_trigger",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "23bdf83c-ab4a-46de-ba85-821639a422fa",
+          "Active": true,
+          "Name": "MCP FD1 On/Off",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/fd2Switcher_trigger",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "3a1c46a5-f8ea-431f-a535-8e17591585ef",
+          "Active": true,
+          "Name": "MCP FD2 On/Off",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK1",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "49c88e5c-5bcb-4788-b51e-e3f046a56ae9",
+          "Active": true,
+          "Name": "CDU LSK 1L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK2",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "ac9fb7eb-e78e-45bc-a816-69048aad629b",
+          "Active": true,
+          "Name": "CDU LSK 2L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK3",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 3",
+          "GUID": "ce9030df-c908-432f-983c-139f7f037377",
+          "Active": true,
+          "Name": "CDU LSK 3L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK4",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "237de729-6453-499b-85f2-61396ca68a5a",
+          "Active": true,
+          "Name": "CDU LSK 4L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK5",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 5",
+          "GUID": "2880749e-3724-4cda-b101-711d5e5a4a7e",
+          "Active": true,
+          "Name": "CDU LSK 5L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/LLSK6",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "03d6a4ae-479d-4708-bf47-6bac0c0a2174",
+          "Active": true,
+          "Name": "CDU LSK 6L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK1",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "c052e99c-3bad-4724-8038-db7f13fdcc66",
+          "Active": true,
+          "Name": "CDU LSK 1R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK2",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "767b3f2f-18c1-4edb-8201-55b0ff39257b",
+          "Active": true,
+          "Name": "CDU LSK 2R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK3",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "25543839-8bbf-4d0c-a0b9-6a222cb0ac9d",
+          "Active": true,
+          "Name": "CDU LSK 3R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK4",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "596b793d-d56a-4e97-9e4f-abac63395269",
+          "Active": true,
+          "Name": "CDU LSK 4R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK5",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "1a769458-0831-4491-9709-4237ba47f51d",
+          "Active": true,
+          "Name": "CDU LSK 5R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/RLSK6",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "cf3753a4-ce31-4ede-9e6e-680c36c62004",
+          "Active": true,
+          "Name": "CDU LSK 6R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/dir",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "25913931-728f-40e3-9c7b-e3956f8ed855",
+          "Active": true,
+          "Name": "CDU DIR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/prog",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "9c1c2eda-64fa-4838-ad45-9b833dd8dfd0",
+          "Active": true,
+          "Name": "CDU PROG",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/clb",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "4b0f6fa6-bedf-4bcb-9dea-a6905c7b26de",
+          "Active": true,
+          "Name": "CDU CLB",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/init_ref",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "e645c0c1-744f-4b0e-8f66-2fa70b62dd4b",
+          "Active": true,
+          "Name": "CDU INIT REF",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/crz",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "cc83b8f7-5f20-4e29-ae77-109d1b16c986",
+          "Active": true,
+          "Name": "CDU CRZ",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/exec",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "8ae7d10a-b9fd-4137-b913-d225600a2494",
+          "Active": true,
+          "Name": "CDU EXEC",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/rte",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "788c1b78-c4a4-4775-9bee-e916a0acc982",
+          "Active": true,
+          "Name": "CDU RTE",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/fix",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "c758353d-542c-433c-8bfc-7f7949c4bda7",
+          "Active": true,
+          "Name": "CDU FIX",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/des",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "5f20eecf-e8de-4785-a656-26cca07cea61",
+          "Active": true,
+          "Name": "CDU DES",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/legs",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "ad7ef9e3-085c-49d0-a0cb-98f0c39cba22",
+          "Active": true,
+          "Name": "CDU LEGS",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/hold",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 24",
+          "GUID": "ff604f64-6962-4cd6-a091-fe664734ce93",
+          "Active": true,
+          "Name": "CDU HOLD",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/mcdu_menu",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "73446d08-8467-4c59-a99e-b6b3df5f418a",
+          "Active": true,
+          "Name": "CDU MCDU MENU",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/dep_arr",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 27",
+          "GUID": "39d4b242-8ae0-4156-b365-e716aed2a584",
+          "Active": true,
+          "Name": "CDU DEP ARR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/delete",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 28",
+          "GUID": "4680868e-8f21-4fa0-838e-17cda31b35a3",
+          "Active": true,
+          "Name": "CDU DELETE",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/prev_page",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 29",
+          "GUID": "73c81f3c-04e5-45d2-9f66-8a80540a53a3",
+          "Active": true,
+          "Name": "CDU PREV PAGE",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/next_page",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 31",
+          "GUID": "5def7409-dd38-4d4d-aecc-6debad522b10",
+          "Active": true,
+          "Name": "CDU NEXT PAGE",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/1",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "5e43a531-77e3-4973-a492-770dbb0cee10",
+          "Active": true,
+          "Name": "CDU Key 1",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/2",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 34",
+          "GUID": "28fae158-62d4-4df9-a6c1-9832b98cf160",
+          "Active": true,
+          "Name": "CDU Key 2",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/3",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "8f859184-21c7-459f-9441-fcece3f9edfa",
+          "Active": true,
+          "Name": "CDU Key 3",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/4",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 36",
+          "GUID": "ec5b1152-4514-409f-b1a1-6478290dd11d",
+          "Active": true,
+          "Name": "CDU Key 4",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/5",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "b1bf8c75-2e00-4c76-b528-e424744122ce",
+          "Active": true,
+          "Name": "CDU Key 5",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/6",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "b05fba50-80cd-456e-b06d-83628eb6d0ae",
+          "Active": true,
+          "Name": "CDU Key 6",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/7",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "996c76eb-6a47-4104-b308-5525bd092051",
+          "Active": true,
+          "Name": "CDU Key 7",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/8",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 40",
+          "GUID": "305e68a5-1c70-4a47-b7d7-f7b9711af225",
+          "Active": true,
+          "Name": "CDU Key 8",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/9",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "9c85ffb7-9a11-4b2f-a92a-c5c570fd00cd",
+          "Active": true,
+          "Name": "CDU Key 9",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/point",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "40be74d8-57d4-4f55-92a6-b8bebace08b6",
+          "Active": true,
+          "Name": "CDU Key .",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/0",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "8d549600-0db3-47f5-a508-e1ae78179dfa",
+          "Active": true,
+          "Name": "CDU Key 0",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/plusminus",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 44",
+          "GUID": "502f349c-e309-4c07-b301-8475198d2d4b",
+          "Active": true,
+          "Name": "CDU Key +/-",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/A",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 45",
+          "GUID": "b9e26802-ed8a-46fc-8d45-d14b9fe258c4",
+          "Active": true,
+          "Name": "CDU Key A",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/B",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 46",
+          "GUID": "26aecec3-bd72-4302-9e40-e03278a91c72",
+          "Active": true,
+          "Name": "CDU Key B",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/C",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 47",
+          "GUID": "146501e2-a598-4491-a8c0-02c0ba7b28bd",
+          "Active": true,
+          "Name": "CDU Key C",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/D",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "f072657f-8a77-4258-a611-310c82dcd200",
+          "Active": true,
+          "Name": "CDU Key D",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/E",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "dfc78ffa-f648-4a31-8e90-b33ff557971c",
+          "Active": true,
+          "Name": "CDU Key E",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/F",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "e3452dec-f8a7-4fbc-b4bf-3abb6a566604",
+          "Active": true,
+          "Name": "CDU Key F",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/G",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "2d2d7826-ff52-489e-890e-4eb4ac3cce05",
+          "Active": true,
+          "Name": "CDU Key G",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/H",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "52a39e46-54b0-4bca-99ea-59929995012f",
+          "Active": true,
+          "Name": "CDU Key H",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/I",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "be4ad1bb-b66a-4508-a26f-25011cbc1269",
+          "Active": true,
+          "Name": "CDU Key I",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/J",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "85f259d6-c30c-4665-8452-a97e66cf5625",
+          "Active": true,
+          "Name": "CDU Key J",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/K",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "46a2e9ef-b06a-4f00-a9b0-1746092233e6",
+          "Active": true,
+          "Name": "CDU Key K",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/L",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "2e5a46ba-62a9-4c31-b324-d40778a808a0",
+          "Active": true,
+          "Name": "CDU Key L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/M",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 57",
+          "GUID": "4c08f070-63f9-47d3-958c-ef625a2cc2d8",
+          "Active": true,
+          "Name": "CDU Key M",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/N",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 58",
+          "GUID": "8fc0526b-954c-4f52-a99d-bcee4693af80",
+          "Active": true,
+          "Name": "CDU Key N",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/O",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 59",
+          "GUID": "b8fffc22-645e-48e6-bd22-5aa970625577",
+          "Active": true,
+          "Name": "CDU Key O",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/P",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 60",
+          "GUID": "702c3f23-fc63-420a-bd8d-9c75363ab435",
+          "Active": true,
+          "Name": "CDU Key P",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/Q",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 61",
+          "GUID": "e39dfe79-787a-4845-a419-afce5989b08c",
+          "Active": true,
+          "Name": "CDU Key Q",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/R",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 62",
+          "GUID": "0349810f-942b-4b83-9f49-74e9f2ae7b3f",
+          "Active": true,
+          "Name": "CDU Key R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/S",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 63",
+          "GUID": "5f8a58c4-3076-48b8-a888-8680431b2887",
+          "Active": true,
+          "Name": "CDU Key S",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/T",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 64",
+          "GUID": "199b9903-c932-4e42-8988-a18cfe07fea9",
+          "Active": true,
+          "Name": "CDU Key T",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/U",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 65",
+          "GUID": "94eaef4c-1c97-4a5b-8584-a64efda9728d",
+          "Active": true,
+          "Name": "CDU Key U",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/V",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 66",
+          "GUID": "09e73665-0170-4ea3-80bf-0c630d7460c7",
+          "Active": true,
+          "Name": "CDU Key V",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/W",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 67",
+          "GUID": "865f851e-cbdb-4e73-b06f-feb8cbcd7d30",
+          "Active": true,
+          "Name": "CDU Key W",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/X",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 68",
+          "GUID": "393198a1-d337-42d3-aced-b8195af15aac",
+          "Active": true,
+          "Name": "CDU Key X",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/Y",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 69",
+          "GUID": "f5eee2bf-dd53-489b-a987-cfb24984ddb7",
+          "Active": true,
+          "Name": "CDU Key Y",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/Z",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 70",
+          "GUID": "43c65c81-8697-4154-a387-d015a18b14d6",
+          "Active": true,
+          "Name": "CDU Key Z",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/slash",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 71",
+          "GUID": "7640f122-e2e6-42f5-8eb8-66d7ebce7381",
+          "Active": true,
+          "Name": "CDU Key /",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/space",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 72",
+          "GUID": "45a05aef-ba89-4d21-b3b2-eff21649eb34",
+          "Active": true,
+          "Name": "CDU Key SP",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "757Avionics/CDU/clear",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 74",
+          "GUID": "a88fcded-47eb-444d-954f-e8fe3e05e078",
+          "Active": true,
+          "Name": "CDU CLR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/AP/fd1Switcher_trigger",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "a3469f34-4870-49ac-a16e-f4ea21f2eda8",
+          "Active": true,
+          "Name": "EFIS FD1 Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/fpv",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "6626f5a7-4d98-4297-8a0c-2b3d6985c5a9",
+          "Active": true,
+          "Name": "EFIS FPV Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/map5",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 36",
+          "GUID": "638ac5e8-7df9-4033-8960-ec1f3c0747ba",
+          "Active": true,
+          "Name": "EFIS WPT Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/map2",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "5c2ce981-d9f9-4103-9dc7-f3c1a969393c",
+          "Active": true,
+          "Name": "EFIS NAV AID Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/map4",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "f97fb38c-2b5c-427f-b548-e967f3989022",
+          "Active": true,
+          "Name": "EFIS DATA Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/map3",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "5c5d1771-c5d7-44d5-aeda-fc979595273d",
+          "Active": true,
+          "Name": "EFIS ARPT Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ng/baro/std/L",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 40",
+          "GUID": "f6f43e0c-9a2e-4cb2-8aeb-b9265b077396",
+          "Active": true,
+          "Name": "EFIS Baro STD Set",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ng/baro/std/L",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "fb39d09f-f98d-40c4-ae68-6732a12855ec",
+          "Active": true,
+          "Name": "EFIS Baro STD Exit",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/gauges/baroRotary_left_rotary-",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "fe7f801b-5174-415c-b40c-16604bfb5aca",
+          "Active": true,
+          "Name": "EFIS Baro Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "1-sim/command/gauges/baroRotary_left_rotary+",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "12da5d8f-0975-45eb-96a7-7eddce38c2a9",
+          "Active": true,
+          "Name": "EFIS Baro Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 46",
+          "GUID": "c6e63157-bdea-45cc-b620-8599385ce34e",
+          "Active": true,
+          "Name": "EFIS ND Mode APP",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 47",
+          "GUID": "2fae1df9-af26-4d40-8e69-10e21ea24aff",
+          "Active": true,
+          "Name": "EFIS ND Mode VOR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "e1303689-4674-44bb-96b7-8f430602c247",
+          "Active": true,
+          "Name": "EFIS ND Mode MAP",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "2cf9c4ed-3b7a-47a9-a5a7-799b4730ee6c",
+          "Active": true,
+          "Name": "EFIS ND Mode MAP (ARC)",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiModeRotary",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "63c7c5b2-bc59-493f-b63c-a98ce8e35761",
+          "Active": true,
+          "Name": "EFIS ND Mode PLN",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "f9394cbb-6870-49a6-965d-e932deb831dd",
+          "Active": true,
+          "Name": "EFIS ND Range 10",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "bd9dcaa2-2f93-4112-a01d-35bcd67cd22f",
+          "Active": true,
+          "Name": "EFIS ND Range 20",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "4f998eed-b0d0-4877-8ce7-13f23ca1e7c8",
+          "Active": true,
+          "Name": "EFIS ND Range 40",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "4"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "ba0a7d7c-a8c9-4cfc-87b7-86b9ebcbdc38",
+          "Active": true,
+          "Name": "EFIS ND Range 80",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "5"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "c81ba533-3293-4677-91b7-691ddff6c9f1",
+          "Active": true,
+          "Name": "EFIS ND Range 160",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "1-sim/ndpanel/1/hsiRangeRotary",
+              "Expression": "6"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "f7a882ce-5858-4186-b9df-c1101cef899d",
+          "Active": true,
+          "Name": "EFIS ND Range 320",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        }
+      ]
+    }
+  ],
+  "Sim": "xplane",
+  "Aircraft": [],
+  "Features": {
+    "FSUIPC": false,
+    "ProSim": false
+  },
+  "_version": "0.9"
+}

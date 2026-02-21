@@ -1,0 +1,3853 @@
+{
+  "Name": "RotateMD80",
+  "ConfigFiles": [
+    {
+      "Label": "RotateMD80",
+      "FileName": "C:\\Users\\pierr\\Documents\\Mobiflight\\RotateMD80.mcc",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/at_target_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Value",
+            "Address": "Mach Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Value",
+          "GUID": "47c300d4-97be-47b9-ac36-2abe60287905",
+          "Active": true,
+          "Name": "Airspeed_Mach",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)*1000",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/at_target_speed"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Value",
+            "Address": "Speed Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Value",
+          "GUID": "789533a0-83af-4527-b46e-6b8e0c82983e",
+          "Active": true,
+          "Name": "Airspeed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "80c60416-8281-42ed-8d51-7f3f345e0b3d",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/hdg_sel_deg_pilot"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Value",
+            "Address": "Heading Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Value",
+          "GUID": "d8b9a2f0-8561-40bb-8361-3ebe830f12c6",
+          "Active": true,
+          "Name": "Heading",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "b94144da-d636-4747-88d3-c36fe8ce836e",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=360,0,$)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/alt_sel_ft"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Value",
+            "Address": "Altitude Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Value",
+          "GUID": "bb6d7b17-472a-4f9e-a0be-3dcdab5a0f87",
+          "Active": true,
+          "Name": "Altitude",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/vertical_velocity"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Value",
+            "Address": "VS Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Value",
+          "GUID": "7551fe4a-3470-4bd4-b1f5-2b758f21f281",
+          "Active": true,
+          "Name": "VS",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a573153d-1e94-4038-9134-323522dab429",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/autopilot/NAV"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Dot",
+            "Address": "Heading Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Dot",
+          "GUID": "d14f582f-26a0-4382-bba0-f5c93288218b",
+          "Active": true,
+          "Name": "Hdg_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/vnav_mode"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Dot",
+            "Address": "Speed Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Dot",
+          "GUID": "a573153d-1e94-4038-9134-323522dab429",
+          "Active": true,
+          "Name": "Spd_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "1",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/autopilot/altitude_hold_armed"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Dot",
+            "Address": "Altitude Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Dot",
+          "GUID": "6ea0f8bf-9e45-4f7a-a267-89dec60ff74f",
+          "Active": true,
+          "Name": "Alt_Managed",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/airspeed_is_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Mode On/Off",
+            "Address": "Mach Mode On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Mode On/Off",
+          "GUID": "a1271dab-b17b-4417-bef2-9cc5120614e7",
+          "Active": true,
+          "Name": "Spd_Mach",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "AirbusFBW/HDGTRKmode"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "TRK Mode On/Off",
+            "Address": "TRK Mode On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "TRK Mode On/Off",
+          "GUID": "9325e400-aaee-4187-b278-2c562f14d7a5",
+          "Active": true,
+          "Name": "HDG_Track",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/heading_mag"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "TRK Value",
+            "Address": "TRK Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "TRK Value",
+          "GUID": "f072b5e5-c6ed-4a74-afb9-0426d39ba482",
+          "Active": true,
+          "Name": "Track",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "9325e400-aaee-4187-b278-2c562f14d7a5",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "b94144da-d636-4747-88d3-c36fe8ce836e",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/lights/dfgc_digital_dimm"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LCD Percentage",
+            "Address": "LCD Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LCD Percentage",
+          "GUID": "0f68d5c4-07a0-42a9-b77c-25a8af048cc6",
+          "Active": true,
+          "Name": "LCD",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*100*#",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "0b086fff-1fc5-43e7-ac43-a3d6b272e5f2",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/lights/dfgc_panel_dimm"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Backlight Percentage",
+            "Address": "Backlight Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Backlight Percentage",
+          "GUID": "bfed4f10-9ea2-4688-bc75-a4838d58bab2",
+          "Active": true,
+          "Name": "Backlight",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*100",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LED Percentage",
+            "Address": "LED Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LED Percentage",
+          "GUID": "5935ff07-1d3a-4fbf-9e69-aa2905eed2aa",
+          "Active": true,
+          "Name": "LED (placeholder, mode button brightness)",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "70",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "AirbusFBW/LOCilluminated"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LOC",
+            "Pin": "LOC",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "LOC",
+          "GUID": "e743a58c-542e-4f44-a7e1-20d8c8c16cd0",
+          "Active": true,
+          "Name": "LOC LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/ap_toggle"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP1",
+            "Pin": "AP1",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP1",
+          "GUID": "ae372f4d-dae7-451c-a960-c72c0e767877",
+          "Active": true,
+          "Name": "AP1 LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$-1",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/at_switch"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "ATHR",
+            "Pin": "ATHR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ATHR",
+          "GUID": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+          "Active": true,
+          "Name": "ATHR LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "AirbusFBW/APPRilluminated"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "APPR",
+            "Pin": "APPR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "APPR",
+          "GUID": "81f213df-c20f-45a8-bc0a-5e8f934d84bf",
+          "Active": true,
+          "Name": "APPR LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/electrical/battery_on"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "0f2a1862-548b-4fff-a468-8a8408cd97d5",
+          "Active": true,
+          "Name": "Battery_Avail",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Comparison",
+                "Operand": ">",
+                "Value": "0",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "0b086fff-1fc5-43e7-ac43-a3d6b272e5f2",
+          "Active": true,
+          "Name": "FCU Display Avail",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "!+#+?",
+                "Active": true
+              },
+              {
+                "Type": "Comparison",
+                "Operand": "=",
+                "Value": "2",
+                "IfValue": "1",
+                "ElseValue": "0",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "d9e6ee3f-3e16-4ee5-a958-5fb63a004d80",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "0f2a1862-548b-4fff-a468-8a8408cd97d5",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "97c2fb47-d321-43e4-b7b3-7d0841d38fe3",
+              "Placeholder": "?",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/fms/dfgc_pwr_up_test"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "97c2fb47-d321-43e4-b7b3-7d0841d38fe3",
+          "Active": true,
+          "Name": "DFGC Testing",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/electrical/ac_l_bus_powered"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "d9e6ee3f-3e16-4ee5-a958-5fb63a004d80",
+          "Active": true,
+          "Name": "AC Bus L",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/flightmodel/position/vh_ind_fpm"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Value",
+            "Address": "VS Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Value",
+          "GUID": "6203bef5-6f77-4fe7-86c3-2725d347b82b",
+          "Active": true,
+          "Name": "Current VS",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a573153d-1e94-4038-9134-323522dab429",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "!=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($/1000, 1)*1000",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/alt_sel_more",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 19",
+          "GUID": "b35697a0-a43f-491a-a5cd-6bc2619299c2",
+          "Active": true,
+          "Name": "Alt Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/alt_sel_less",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "982c5fcf-2346-44c5-a34d-c6b613b8a8c6",
+          "Active": true,
+          "Name": "Alt Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "toliss_airbus/metric_alt_button_push",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "1087ec3c-bc17-43f1-861a-e4ada0404558",
+          "Active": true,
+          "Name": "Metric Alt",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/ils_mode",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "bc166695-4335-4821-a6b8-3d7c94a01afa",
+          "Active": true,
+          "Name": "APPR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/alt_knob_push",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "7233d3be-67d6-439a-810e-4e77bd09fba0",
+          "Active": true,
+          "Name": "Alt Push",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/alt_hold_arm",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "39328a45-a41f-4d38-a02d-14f2dd040111",
+          "Active": true,
+          "Name": "Alt Pull",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/vertical_speed_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "86fd34ea-a165-4098-adc5-8dbcf1bb9112",
+          "Active": true,
+          "Name": "VS Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/vertical_speed_down",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "a7a0eed0-c1ae-4472-992c-038bc43f29a2",
+          "Active": true,
+          "Name": "VS Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/ias_mach_sel",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 24",
+          "GUID": "54f6f885-05cb-4291-92bf-869c3c9761cd",
+          "Active": true,
+          "Name": "VS Push",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/v_speed_sel",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "97d0ee53-aabb-49b1-8bb1-64f76493f7ea",
+          "Active": true,
+          "Name": "VS Pull",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/hdg_sel_more",
+              "Expression": ""
+            },
+            "onRelease": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "",
+              "Expression": ""
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "af647ace-ac11-490f-a3db-2d50fe4ac60b",
+          "Active": true,
+          "Name": "HDG Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/hdg_sel_less",
+              "Expression": ""
+            },
+            "onRelease": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "",
+              "Expression": ""
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "cf1f5d3e-892c-42a8-a4ed-59947bad885f",
+          "Active": true,
+          "Name": "HDG Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/nav_mode",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "146de7fb-9d13-45f3-b918-01de6581b722",
+          "Active": true,
+          "Name": "Hdg Push",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/hdg_sel_mode",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "4ebcf744-ffcf-47b6-8806-4606f75eb534",
+          "Active": true,
+          "Name": "HDG Pull",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/speed_sel_more",
+              "Expression": ""
+            },
+            "onRelease": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "",
+              "Expression": ""
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "39c050e0-7b9a-4b3a-9a63-2a5f69e12a1a",
+          "Active": true,
+          "Name": "SPD Inc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/speed_sel_less",
+              "Expression": ""
+            },
+            "onRelease": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "",
+              "Expression": ""
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "af9e86bf-f55e-42f8-a952-201b1773746d",
+          "Active": true,
+          "Name": "SPD Dec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/vnav_sel",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "ac8119be-e39d-4c98-ba57-3756ee89b5ad",
+          "Active": true,
+          "Name": "SPD Push",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/spd_sel",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "aa8aa94b-f794-4a15-8ff0-469d98ca776d",
+          "Active": true,
+          "Name": "SPD Pull",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/spd_mach_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "eb7b79e7-e1db-4b19-9d9d-073f1fec7312",
+          "Active": true,
+          "Name": "SPD/Mach Toggle",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/vorloc_mode",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "da954256-f6fb-4ce2-8ef5-2299b19dab63",
+          "Active": true,
+          "Name": "LOC Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/ap_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "5a82b3c7-945c-48ca-9665-2e9ff6c6800c",
+          "Active": true,
+          "Name": "AP1 Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/autopilot/at_switch",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "55e7445b-853f-4e13-bc8d-7fd62ec818de",
+          "Active": true,
+          "Name": "A/THR Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/autopilot/at_switch",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "159268f0-e919-4bb8-bf37-b848908ab2c3",
+          "Active": true,
+          "Name": "A/THR Button Copy",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "6c6f8f77-8bc4-4808-834f-0f9a0e1b2744",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "AirbusFBW/EXPEDbutton",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "23bdf83c-ab4a-46de-ba85-821639a422fa",
+          "Active": true,
+          "Name": "Exped Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 29.92,
+            "String": null
+          },
+          "Device": {
+            "Name": "inHg Value Left",
+            "Address": "inHg Value Left",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "inHg Value Left",
+          "GUID": "a2318efe-4a7d-411a-b78a-34da5d56a3d6",
+          "Active": true,
+          "Name": "inHg value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "variable",
+              "Ref": "inhg_on",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 29.92,
+            "String": null
+          },
+          "Device": {
+            "Name": "hPa Value Left",
+            "Address": "hPa Value Left",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "hPa Value Left",
+          "GUID": "c544e5bd-b57c-4388-8565-9b8e25c14bc6",
+          "Active": true,
+          "Name": "hpA Value",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Preconditions": [
+            {
+              "Type": "variable",
+              "Ref": "inhg_on",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "33.865*$",
+                "Active": true
+              },
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "VariableInputAction",
+              "Variable": {
+                "TYPE": "number",
+                "Name": "inhg_on",
+                "Number": 1.0,
+                "Text": "1",
+                "Expression": "1"
+              }
+            },
+            "onRelease": {
+              "Type": "VariableInputAction",
+              "Variable": {
+                "TYPE": "number",
+                "Name": "inhg_on",
+                "Number": 0.0,
+                "Text": "0",
+                "Expression": "0"
+              }
+            },
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 44",
+          "GUID": "0837eb37-d3d6-44c5-9345-5c559fda19a3",
+          "Active": true,
+          "Name": "inHg Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "MobiFlightVariable": {
+              "TYPE": "number",
+              "Name": "inhg_on",
+              "Number": 0.0,
+              "Text": "",
+              "Expression": "$"
+            },
+            "Type": "VariableSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "inHg Mode On/Off Left",
+            "Address": "inHg Mode On/Off Left",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "inHg Mode On/Off Left",
+          "GUID": "0d9039a6-713b-4fc2-bedb-b04327306a0d",
+          "Active": true,
+          "Name": "EFIS inHg mode",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "sim/cockpit/misc/barometer_setting",
+              "Expression": "#"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "c7d215bb-53dc-4686-8f0d-4c2c22f1bddb",
+          "Active": true,
+          "Name": "Baro down button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "33b74004-bab0-4053-823d-90991220d517",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "sim/cockpit/misc/barometer_setting",
+              "Expression": "#"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "7cdac096-ad21-4059-8123-a1d98f92b092",
+          "Active": true,
+          "Name": "Baro up button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "4ea8f2ea-94ab-4a5d-9699-3fd73d0719b4",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "sim/cockpit/misc/barometer_setting",
+              "Expression": "29.92"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "4a9bf1c2-fe62-41c3-aab3-dacefac1df5c",
+          "Active": true,
+          "Name": "Baro STD",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/misc/barometer_setting"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 30.059999,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "33b74004-bab0-4053-823d-90991220d517",
+          "Active": true,
+          "Name": "Baro value down one",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)",
+                "Active": true
+              },
+              {
+                "Type": "Transformation",
+                "Expression": "$-0.01",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/misc/barometer_setting"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 30.059999,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "4ea8f2ea-94ab-4a5d-9699-3fd73d0719b4",
+          "Active": true,
+          "Name": "Baro value up one",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "-",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)",
+                "Active": true
+              },
+              {
+                "Type": "Transformation",
+                "Expression": "$+0.01",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "3797e8f7-f450-4ebb-a087-a2624c277751",
+          "Active": true,
+          "Name": "Range 10",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "324c2da0-fdfa-405c-81d6-3162df6f9e73",
+          "Active": true,
+          "Name": "Range 20",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "d926475d-77e3-4d20-b477-36e512b985b0",
+          "Active": true,
+          "Name": "Range 40",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "7599e139-af1c-453b-94c4-3240b65f4094",
+          "Active": true,
+          "Name": "Range 80",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "4"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "43898c4e-26c2-4cd4-a2a3-70449e5dc79d",
+          "Active": true,
+          "Name": "Range 160",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_range",
+              "Expression": "5"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "dc14adbd-a806-4f71-b20a-ffc00247fe9d",
+          "Active": true,
+          "Name": "Range 40",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/instruments/data_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "7da055c1-8fcc-4a97-ae0c-b888d78f1c11",
+          "Active": true,
+          "Name": "DATA on ND",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/instruments/airport_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "3bfd7ce2-7fc7-4c81-b82d-e7c0583c7c39",
+          "Active": true,
+          "Name": "ARPT on ND",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/instruments/navaid_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "598d8dfe-91d4-4eda-a4e0-5976e1687017",
+          "Active": true,
+          "Name": "NAVAID on ND (VORD)",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/instruments/navaid_button",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "8b9576d4-3c93-4036-bb83-d46971d04051",
+          "Active": true,
+          "Name": "NAVAID on ND (NDB)",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/instruments/data_button_clicked"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "CSTR Left",
+            "Pin": "CSTR Left",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "CSTR Left",
+          "GUID": "5189bf1a-bcd9-4b54-bbc8-446a906b37ba",
+          "Active": true,
+          "Name": "LED DATA on ND",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/instruments/airport_button_clicked"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "ARPT Left",
+            "Pin": "ARPT Left",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ARPT Left",
+          "GUID": "93b87327-5265-4d1b-9bf2-6f9dd7a8d7a0",
+          "Active": true,
+          "Name": "LED ARPT on ND",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/instruments/navaid_button_clicked"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VORD Left",
+            "Pin": "VORD Left",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "VORD Left",
+          "GUID": "d699e3e8-ce80-40ed-990d-05a81a0a4b42",
+          "Active": true,
+          "Name": "LED VORD on ND",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/instruments/navaid_button_clicked"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "NDB Left",
+            "Pin": "NDB Left",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "NDB Left",
+          "GUID": "d95828e8-9c3e-4503-bbed-69a7148e609b",
+          "Active": true,
+          "Name": "LED NDB on ND",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "Rotate/md80/autopilot/fd_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "aa89d661-84df-4e23-bdd0-d7d2822041ba",
+          "Active": true,
+          "Name": "FD Button",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/autopilot/fd_toggle"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "FD Left",
+            "Pin": "FD Left",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "FD Left",
+          "GUID": "231428bc-43c2-4e25-91da-038abe29dc98",
+          "Active": true,
+          "Name": "FD LED",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_mode",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "93488be8-2599-49f5-b050-65ddb7e14458",
+          "Active": true,
+          "Name": "ND Rose NAV",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_mode",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "5d2c43b7-6414-4419-b66e-c1ba7a268fd5",
+          "Active": true,
+          "Name": "ND Arc",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "Rotate/md80/instruments/nav_display_mode",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "401bfa47-0dfe-4fea-a00d-1f8a38660ee7",
+          "Active": true,
+          "Name": "ND Plan",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/fms/cdu_screen_brightness_ratio"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LCD Percentage",
+            "Address": "LCD Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LCD Percentage",
+          "GUID": "57657862-93fd-41f3-83cd-e3055118b33c",
+          "Active": true,
+          "Name": "MCDU Brightness",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000",
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($*100,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "Rotate/md80/fms/exec_pending"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "STATUS",
+            "Pin": "STATUS",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "STATUS",
+          "GUID": "daa975af-58db-4050-8a5f-3704473e0a14",
+          "Active": true,
+          "Name": "MCDU EXEC Light",
+          "Type": "OutputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_0",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "8d60d828-4a9c-48cb-a61c-6e6997b5529c",
+          "Active": true,
+          "Name": "MCDU Key 0",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_1",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "41b4baac-6e05-46b1-ba72-08d30d10baf6",
+          "Active": true,
+          "Name": "MCDU Key 1",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_2",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 34",
+          "GUID": "1c73e18f-392e-4124-8d78-e86e0283c757",
+          "Active": true,
+          "Name": "MCDU Key 2",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_3",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "11697299-dcd1-413a-b16f-4ecf4e4581b0",
+          "Active": true,
+          "Name": "MCDU Key 3",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_4",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 36",
+          "GUID": "7bc24fc4-5fed-4433-8c1b-db7d4b4fb958",
+          "Active": true,
+          "Name": "MCDU Key 4",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_5",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "92bf136e-4772-4179-a1f1-913badbd5fb9",
+          "Active": true,
+          "Name": "MCDU Key 5",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_6",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "051f02e9-5e98-4922-9e49-4ab3d4a546af",
+          "Active": true,
+          "Name": "MCDU Key 6",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_7",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "915a30dd-67ec-40b0-9e53-3e93c9f61ea7",
+          "Active": true,
+          "Name": "MCDU Key 7",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_8",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 40",
+          "GUID": "1103effd-a5fc-4916-8d06-987342a6e05b",
+          "Active": true,
+          "Name": "MCDU Key 8",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_9",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "1c870624-e0f3-4754-8d9d-3fc8aec6d00b",
+          "Active": true,
+          "Name": "MCDU Key 9",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_A",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 45",
+          "GUID": "5823ac92-c777-4a79-a49f-047e3d3bdcb5",
+          "Active": true,
+          "Name": "MCDU Key A",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_B",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 46",
+          "GUID": "b275b8ee-6ec4-48e7-83d2-25b3380dd3cc",
+          "Active": true,
+          "Name": "MCDU Key B",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_C",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 47",
+          "GUID": "c3d4e5f6-7a8b-4c9d-8e2f-1a2b3c4d5e6f",
+          "Active": true,
+          "Name": "MCDU Key C",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_D",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "d4e5f6a7-8b9c-4d2e-9f3a-2b3c4d5e6f7a",
+          "Active": true,
+          "Name": "MCDU Key D",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_E",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "e5f6a7b8-9c2d-4e3f-a4b5-3c4d5e6f7a8b",
+          "Active": true,
+          "Name": "MCDU Key E",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_F",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "f6a7b8c9-2d3e-4f5a-b6c7-4d5e6f7a8b9c",
+          "Active": true,
+          "Name": "MCDU Key F",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_G",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "a7b8c9d2-3e4f-5a6b-c7d8-5e6f7a8b9c2d",
+          "Active": true,
+          "Name": "MCDU Key G",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_H",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "b8c9d2e3-4f5a-6b7c-d8e9-6f7a8b9c2d3e",
+          "Active": true,
+          "Name": "MCDU Key H",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_I",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "c9d2e3f4-5a6b-7c8d-e9fa-7a8b9c2d3e4f",
+          "Active": true,
+          "Name": "MCDU Key I",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_J",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "d2e3f4a5-6b7c-8d9e-fa2b-8b9c2d3e4f5a",
+          "Active": true,
+          "Name": "MCDU Key J",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_K",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "e3f4a5b6-7c8d-9efa-2b3c-9c2d3e4f5a6b",
+          "Active": true,
+          "Name": "MCDU Key K",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "f4a5b6c7-8d9e-fa2b-3c4d-c2d3e4f5a6b7",
+          "Active": true,
+          "Name": "MCDU Key L",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_M",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 57",
+          "GUID": "a5b6c7d8-9efa-2b3c-4d5e-d3e4f5a6b7c8",
+          "Active": true,
+          "Name": "MCDU Key M",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_N",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 58",
+          "GUID": "b6c7d8e9-fa2b-3c4d-5e6f-e4f5a6b7c8d9",
+          "Active": true,
+          "Name": "MCDU Key N",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_O",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 59",
+          "GUID": "c7d8e9fa-2b3c-4d5e-6f7a-f5a6b7c8d9ea",
+          "Active": true,
+          "Name": "MCDU Key O",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_P",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 60",
+          "GUID": "d8e9fa2b-3c4d-5e6f-7a8b-a6b7c8d9ea2f",
+          "Active": true,
+          "Name": "MCDU Key P",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_Q",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 61",
+          "GUID": "e9fa2b3c-4d5e-6f7a-8b9c-b7c8d9ea2f3b",
+          "Active": true,
+          "Name": "MCDU Key Q",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 62",
+          "GUID": "fa2b3c4d-5e6f-7a8b-9c2d-c8d9ea2f3b4c",
+          "Active": true,
+          "Name": "MCDU Key R",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_S",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 63",
+          "GUID": "2b3c4d5e-6f7a-8b9c-2d3e-d9ea2f3b4c5d",
+          "Active": true,
+          "Name": "MCDU Key S",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_T",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 64",
+          "GUID": "3c4d5e6f-7a8b-9c2d-3e4f-ea2f3b4c5d6e",
+          "Active": true,
+          "Name": "MCDU Key T",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_U",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 65",
+          "GUID": "4d5e6f7a-8b9c-2d3e-4f5a-a2f3b4c5d6e7",
+          "Active": true,
+          "Name": "MCDU Key U",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_V",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 66",
+          "GUID": "5e6f7a8b-9c2d-3e4f-5a6b-2f3b4c5d6e7f",
+          "Active": true,
+          "Name": "MCDU Key V",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_W",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 67",
+          "GUID": "6f7a8b9c-2d3e-4f5a-6b7c-f3b4c5d6e7f8",
+          "Active": true,
+          "Name": "MCDU Key W",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_X",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 68",
+          "GUID": "7a8b9c2d-3e4f-5a6b-7c8d-3b4c5d6e7f89",
+          "Active": true,
+          "Name": "MCDU Key X",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_Y",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 69",
+          "GUID": "8b9c2d3e-4f5a-6b7c-8d9e-4c5d6e7f89ab",
+          "Active": true,
+          "Name": "MCDU Key Y",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_Z",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 70",
+          "GUID": "9c2d3e4f-5a6b-7c8d-9efa-5d6e7f89ab2c",
+          "Active": true,
+          "Name": "MCDU Key Z",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_CLR",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 74",
+          "GUID": "3a4a2f0e-3e6d-4a9a-aef0-9e493e854d06",
+          "Active": true,
+          "Name": "MCDU Key CLR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_DEL",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 72",
+          "GUID": "fb31747b-7e9a-4db2-b5d8-68de784bce96",
+          "Active": true,
+          "Name": "MCDU Key DEL",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_BAR",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 71",
+          "GUID": "bde68201-e36a-49ce-bb32-35d6e779153a",
+          "Active": true,
+          "Name": "MCDU Key Slash",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_PTO",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "35d3ffa3-15b6-417f-86fd-2899dfacf6ee",
+          "Active": true,
+          "Name": "MCDU Key Decimal",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_NEXT",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 31",
+          "GUID": "6ad056cb-f412-472f-8882-fe4421ce4640",
+          "Active": true,
+          "Name": "MCDU Key Next Page",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_PREV",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 29",
+          "GUID": "8aa19c61-3950-4397-aecc-9e0ecc6f41b8",
+          "Active": true,
+          "Name": "MCDU Key Prev Page",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_SIGNO",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 44",
+          "GUID": "0465fd76-db42-43fc-a7e6-2a13ebc6542b",
+          "Active": true,
+          "Name": "MCDU Key Plus Minus",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL1",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "5fee42ca-b7fe-4d37-94e8-a5ebe7e8d0f9",
+          "Active": true,
+          "Name": "MCDU Key L1",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL2",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "2a3b4c5d-6e7f-8a9b-c2d3-e4f5a6b7c8d9",
+          "Active": true,
+          "Name": "MCDU Key L2",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL3",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 3",
+          "GUID": "3b4c5d6e-7f8a-9b2c-d3e4-f5a6b7c8d9ea",
+          "Active": true,
+          "Name": "MCDU Key L3",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL4",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "4c5d6e7f-8a9b-2c3d-e4f5-a6b7c8d9eafb",
+          "Active": true,
+          "Name": "MCDU Key L4",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL5",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 5",
+          "GUID": "5d6e7f8a-9b2c-3d4e-f5a6-b7c8d9eafb2c",
+          "Active": true,
+          "Name": "MCDU Key L5",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FL6",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "6e7f8a9b-2c3d-4e5f-a6b7-c8d9eafb2c3d",
+          "Active": true,
+          "Name": "MCDU Key L6",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR1",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "1ff68a94-525c-4389-a93e-2307569577f1",
+          "Active": true,
+          "Name": "MCDU Key R1",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR2",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "7f8a9b2c-3d4e-5f6a-b7c8-d9eafb2c3d4e",
+          "Active": true,
+          "Name": "MCDU Key R2",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR3",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "8a9b2c3d-4e5f-6a7b-c8d9-eafb2c3d4e5f",
+          "Active": true,
+          "Name": "MCDU Key R3",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR4",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "9b2c3d4e-5f6a-7b8c-d9ea-fb2c3d4e5f6a",
+          "Active": true,
+          "Name": "MCDU Key R4",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR5",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "a2c3d4e5-f6a7-b8c9-daea-fb2c3d4e5f6b",
+          "Active": true,
+          "Name": "MCDU Key R5",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FR6",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "b3c4d5e6-f7a8-b9ca-ebfb-2c3d4e5f6b7c",
+          "Active": true,
+          "Name": "MCDU Key R6",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_INIT",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "2b2d5f24-ac13-4b63-b94f-68885ca48b0b",
+          "Active": true,
+          "Name": "MCDU Key INIT",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_DIR",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "d18b8813-7a68-4458-8b85-d049f1f17f43",
+          "Active": true,
+          "Name": "MCDU Key DIR",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_LEGS",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "318f0015-1941-4c37-8587-f9cab5742d2a",
+          "Active": true,
+          "Name": "MCDU Key LEGS",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_RTE",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "9ab1286b-d813-474e-a38f-e3e567866a99",
+          "Active": true,
+          "Name": "MCDU Key RTE",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_PROG",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "66543187-f5e7-4c4d-9f58-fb06029a0328",
+          "Active": true,
+          "Name": "MCDU Key PROG",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_DEAR",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 27",
+          "GUID": "a74448c0-19f5-4bd6-9662-8a4db9c49a74",
+          "Active": true,
+          "Name": "MCDU Key AIRPORT",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_FIX",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "aee3e593-113c-41be-86ce-0884d30791e8",
+          "Active": true,
+          "Name": "MCDU Key RADNAV",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_MENU",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "28f1200d-fa45-4376-93bd-c6e2b9c2ce2d",
+          "Active": true,
+          "Name": "MCDU Key MENU",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_HOLD",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "b6ca6df1-85d8-4c5d-9010-e50e64264e0b",
+          "Active": true,
+          "Name": "MCDU Key FUELPRED",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_CLB",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "ede02521-a1cc-4514-a673-db61e632d6ca",
+          "Active": true,
+          "Name": "MCDU Key PERF",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_DES",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "d7370eba-2dea-40fc-9137-5f36f0220c1e",
+          "Active": true,
+          "Name": "MCDU Key DATA",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_CRZ",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 28",
+          "GUID": "fa273c94-dac4-442b-94c6-d7d9e44a0f8e",
+          "Active": true,
+          "Name": "MCDU Key BlankLeft",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "rotate/md80/cdu/Cdu_EXEC",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "86544ced-3fd0-40b1-be33-f9a5e2723709",
+          "Active": true,
+          "Name": "MCDU Key BlankRightExec",
+          "Type": "InputConfigItem",
+          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+        }
+      ]
+    }
+  ],
+  "Sim": "xplane",
+  "Aircraft": [],
+  "Features": {
+    "FSUIPC": false,
+    "ProSim": false
+  },
+  "_version": "0.9"
+}
