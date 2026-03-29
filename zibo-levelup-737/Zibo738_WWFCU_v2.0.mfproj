@@ -1,0 +1,4660 @@
+{
+  "Name": "Zibo738_WWFCU_v2.0",
+  "ConfigFiles": [
+    {
+      "Label": "Zibo738_WWFCU_v2.0",
+      "FileName": "C:\\Users\\pierr\\Documents\\Mobiflight\\Zibo738_WWFCU_v2.0.mcc",
+      "ReferenceOnly": false,
+      "EmbedContent": true,
+      "ConfigItems": [
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/altitude"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Value",
+            "Address": "Altitude Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Value",
+          "GUID": "6f1b7616-d75b-4d13-8e00-a96110efbf31",
+          "Active": true,
+          "Name": "MCP ALT Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/heading_mag"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Value",
+            "Address": "Heading Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Value",
+          "GUID": "8bc077a5-3e35-4d76-9b0c-d0ff96bbdd8a",
+          "Active": true,
+          "Name": "MCP HDG Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/mcp_speed_dial_kts_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Value",
+            "Address": "Speed Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Value",
+          "GUID": "79be0f03-f40d-474a-8f66-d52fbb5e22e7",
+          "Active": true,
+          "Name": "MCP SPD Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "f89dbc84-abdf-4674-959b-4b916238b4c8",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "cd1231b9-21df-422f-8819-5417b13cb905",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Dashes On/Off",
+            "Address": "Speed Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Dashes On/Off",
+          "GUID": "cd1231b9-21df-422f-8819-5417b13cb905",
+          "Active": true,
+          "Name": "MCP SPD Dashes",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "7dd0319b-3df3-4087-9721-ac4d34e0ce12",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Speed Dot",
+            "Address": "Speed Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Speed Dot",
+          "GUID": "7576c7ab-fb94-4228-b426-ce49628f520e",
+          "Active": true,
+          "Name": "MCP SPD Modes Dot",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if((!=2)||#||$=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "b6a9687e-1b8f-4a71-8263-eb54ae0c8b84",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "636f2fdf-318f-4502-9d5c-4e132dab7539",
+              "Placeholder": "!",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/autopilot/vvi_dial_fpm"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Value",
+            "Address": "VS Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Value",
+          "GUID": "dcfd47f2-9b68-4e83-947d-6ed1e5c87e88",
+          "Active": true,
+          "Name": "MCP V/S Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "c76a9215-79e1-4960-bd60-afff8a8db867",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/vs_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Dashes On/Off",
+            "Address": "VS Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Dashes On/Off",
+          "GUID": "c76a9215-79e1-4960-bd60-afff8a8db867",
+          "Active": true,
+          "Name": "MCP V/S Dashes",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=0,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/vnav_status1"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Altitude Dot",
+            "Address": "Altitude Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Altitude Dot",
+          "GUID": "b6a9687e-1b8f-4a71-8263-eb54ae0c8b84",
+          "Active": true,
+          "Name": "MCP VNAV Dot",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/cmd_a_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP1",
+            "Pin": "AP1",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP1",
+          "GUID": "f73f4c58-a80d-4021-b9d0-a8d5becdd24f",
+          "Active": true,
+          "Name": "MCP AP1 LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1&&#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "e149172e-7753-445a-9b52-7861af950eb7",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/cmd_b_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "AP2",
+            "Pin": "AP2",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "AP2",
+          "GUID": "8b478cd9-8636-447e-b042-e514ce1decd0",
+          "Active": true,
+          "Name": "MCP AP2 LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1&&#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "e149172e-7753-445a-9b52-7861af950eb7",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/autothrottle_arm_pos"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "ATHR",
+            "Pin": "ATHR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "ATHR",
+          "GUID": "cdcb1227-9ac9-47d7-a711-f6dd69d102b0",
+          "Active": true,
+          "Name": "MCP ATHR LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=1||$=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "a26109b3-f20c-42ef-be5d-616cf87e8900",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/app_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "APPR",
+            "Pin": "APPR",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "APPR",
+          "GUID": "58e2f6a3-aa53-4512-b7f5-80ca85fb09ee",
+          "Active": true,
+          "Name": "MCP APPR LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/vorloc_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LOC",
+            "Pin": "LOC",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "LOC",
+          "GUID": "309de8d7-df4c-4075-8c5a-213c7f5e8811",
+          "Active": true,
+          "Name": "MCP VOR/LOC LED",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/lnav_status"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Heading Dot",
+            "Address": "Heading Dot",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Heading Dot",
+          "GUID": "ef5670a5-8578-4607-8a91-59065d2459aa",
+          "Active": true,
+          "Name": "MCP HDG Sel Dot",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1,1,0)",
+                "Active": false
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/mcp_speed_dial_kts_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Value",
+            "Address": "Mach Value",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Value",
+          "GUID": "eb7cb3d3-7951-4506-af81-bef6b3f6b6dc",
+          "Active": true,
+          "Name": "MCP SPD-MACH Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "f89dbc84-abdf-4674-959b-4b916238b4c8",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            },
+            {
+              "Type": "config",
+              "Ref": "cd1231b9-21df-422f-8819-5417b13cb905",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/autopilot/airspeed_is_mach"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Mach Mode On/Off",
+            "Address": "Mach Mode On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Mach Mode On/Off",
+          "GUID": "f89dbc84-abdf-4674-959b-4b916238b4c8",
+          "Active": true,
+          "Name": "MCP IAS/MACH Indication",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LCD Percentage",
+            "Address": "LCD Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LCD Percentage",
+          "GUID": "61e58c24-c806-462a-b427-67a20dc9640a",
+          "Active": true,
+          "Name": "MCP LCD",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#=1,100,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "5414ac56-d72c-40af-90a7-b4d6bde1014b",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/electric/panel_brightness[0]"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "Backlight Percentage",
+            "Address": "Backlight Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "Backlight Percentage",
+          "GUID": "5ce7af71-bdb8-4081-99c0-fe4a6f657e4c",
+          "Active": true,
+          "Name": "MCP Backlight",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*30*#",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "5414ac56-d72c-40af-90a7-b4d6bde1014b",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 100.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LED Percentage",
+            "Address": "LED Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LED Percentage",
+          "GUID": "b9fc2221-f96d-4863-8bc3-8e27979cae0d",
+          "Active": true,
+          "Name": "MCP LED Placeholder",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(B||A||@||?||!||$=1,100,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "a26109b3-f20c-42ef-be5d-616cf87e8900",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "309de8d7-df4c-4075-8c5a-213c7f5e8811",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "58e2f6a3-aa53-4512-b7f5-80ca85fb09ee",
+              "Placeholder": "?",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "cdcb1227-9ac9-47d7-a711-f6dd69d102b0",
+              "Placeholder": "@",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "8b478cd9-8636-447e-b042-e514ce1decd0",
+              "Placeholder": "A",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "f73f4c58-a80d-4021-b9d0-a8d5becdd24f",
+              "Placeholder": "B",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/annunciator/at_disconnect"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "a26109b3-f20c-42ef-be5d-616cf87e8900",
+          "Active": true,
+          "Name": "ATHR P/rst LED ",
+          "Type": "OutputConfigItem",
+          "Controller": null,
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1&&#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "5414ac56-d72c-40af-90a7-b4d6bde1014b",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/speed_mode"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "636f2fdf-318f-4502-9d5c-4e132dab7539",
+          "Active": true,
+          "Name": "MCP SPD LED Placeholder",
+          "Type": "OutputConfigItem",
+          "Controller": null,
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=1&&#=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "5414ac56-d72c-40af-90a7-b4d6bde1014b",
+              "Placeholder": "#",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "5414ac56-d72c-40af-90a7-b4d6bde1014b",
+          "Active": true,
+          "Name": "Power supply available",
+          "Type": "OutputConfigItem",
+          "Controller": null,
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if(#||!||?=1,1,0)",
+                "Active": true
+              }
+            ]
+          },
+          "ConfigRefs": [
+            {
+              "Active": true,
+              "Ref": "e149172e-7753-445a-9b52-7861af950eb7",
+              "Placeholder": "#",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "a203c1ed-3bdd-4b4b-af67-6469d3519747",
+              "Placeholder": "!",
+              "TestValue": "1"
+            },
+            {
+              "Active": true,
+              "Ref": "c47b4071-80e5-49fd-8149-716631503536",
+              "Placeholder": "?",
+              "TestValue": "1"
+            }
+          ]
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/electric/battery_pos"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "e149172e-7753-445a-9b52-7861af950eb7",
+          "Active": true,
+          "Name": "Battery On",
+          "Type": "OutputConfigItem",
+          "Controller": null
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit/electrical/gpu_on"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "a203c1ed-3bdd-4b4b-af67-6469d3519747",
+          "Active": true,
+          "Name": "GPU On",
+          "Type": "OutputConfigItem",
+          "Controller": null
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/electrical/apu_bus_enable"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "c47b4071-80e5-49fd-8149-716631503536",
+          "Active": true,
+          "Name": "APU On",
+          "Type": "OutputConfigItem",
+          "Controller": null
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/autopilot/speed_mode"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "7dd0319b-3df3-4087-9721-ac4d34e0ce12",
+          "Active": true,
+          "Name": "Speed Mode Indicator",
+          "Type": "OutputConfigItem",
+          "Controller": null,
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "if($=7||$=9,1,0)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": ""
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "VS Dashes On/Off",
+            "Address": "VS Dashes On/Off",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "VS Dashes On/Off",
+          "GUID": "87a04676-360d-40c8-8f55-cb8b5fa2c9ad",
+          "Active": true,
+          "Name": "Display Output LVL/CH - OFF",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "1+19",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/altitude_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 19"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 19",
+          "GUID": "03e2ee58-d792-4824-a21f-6f0e402dae6a",
+          "Active": true,
+          "Name": "MCP ALT UP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/altitude_dn",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 18"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "c3289d27-3d01-477f-9b43-ede96828cc6b",
+          "Active": true,
+          "Name": "MCP ALT DOWN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/vnav_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 20"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "4d698565-26c4-45ec-bb12-2bfe427cf999",
+          "Active": true,
+          "Name": "MCP VNAV ON",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/lvl_chg_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 21"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "978ea2e3-a651-48a9-9a7c-4d5686a74b19",
+          "Active": true,
+          "Name": "MCP LVL CHG",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/heading_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 15"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "3d74d5d2-2324-4d40-9c91-0d4a45e6d024",
+          "Active": true,
+          "Name": "MCP HDG Right",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/heading_dn",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 14"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "885f864e-e28b-42fa-b83c-7e17964df94e",
+          "Active": true,
+          "Name": "MCP HDG Left",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/hdg_sel_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 17"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "73790afa-23af-49d1-bba7-07155f758b18",
+          "Active": true,
+          "Name": "MCP HDG SEL",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/lnav_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 16"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "10edc9b3-bf3c-4e7a-a863-6b20c39838dd",
+          "Active": true,
+          "Name": "MCP LNAV ON",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/airspeed_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 11"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "98613bb3-0c16-4d18-bed3-c598e103910d",
+          "Active": true,
+          "Name": "MCP SPD UP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/airspeed_down",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 10"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "5ea38360-1a6e-4a54-a5ae-09b1d6324262",
+          "Active": true,
+          "Name": "MCP SPD DOWN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/speed_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 12"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "8652fa82-6665-42ed-89d3-a8c2016d2987",
+          "Active": true,
+          "Name": "MCP SPD Select",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/spd_interv",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 3"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 3",
+          "GUID": "5a147c54-1d6e-48d4-b23b-5c6978d82ea6",
+          "Active": true,
+          "Name": "MCP SPD INTV",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/vertical_speed_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 23"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "d287059f-3f37-43ad-b17f-88422556e1c2",
+          "Active": true,
+          "Name": "MCP V/S UP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "sim/autopilot/vertical_speed_down",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 22"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "16a10c69-d88e-4cc0-84f3-e9863d749742",
+          "Active": true,
+          "Name": "MCP V/S Down",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/vs_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 24"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 24",
+          "GUID": "92940aa9-8238-452d-9e50-08bfe161a745",
+          "Active": true,
+          "Name": "MCP V/S Preselect",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/alt_hld_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 25"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "ca5a77d4-1582-417f-a1f7-48065aad4262",
+          "Active": true,
+          "Name": "MCP ALT HOLD ",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/app_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 9"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "3e2286ea-627f-48a0-b09a-341a5cda52ec",
+          "Active": true,
+          "Name": "MCP APP ",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/autothrottle_arm_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 6"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "905f93e1-a023-46c0-9731-88325bfc4b0c",
+          "Active": true,
+          "Name": "MCP A/T ARM",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/vorloc_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 2"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "caf1cfa4-53a4-4be7-b45f-e2129ff2a89f",
+          "Active": true,
+          "Name": "MCP VOR/LOC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/flight_director_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "095f37a4-b7e6-42c6-b4e6-bf04ec5d0359",
+          "Active": true,
+          "Name": "MCP F/D Cpt on/off",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/flight_director_fo_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "abf0f883-f5b5-4b7a-a929-41a4d19bb6b1",
+          "Active": true,
+          "Name": "MCP F/D Fo on/off",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/cmd_a_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 4"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "43c102a5-127c-4752-869f-c5bd278451e6",
+          "Active": true,
+          "Name": "MCP CMD A ",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/cmd_b_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 5"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 5",
+          "GUID": "6535a70b-4705-4f19-9068-0942be9ec0a9",
+          "Active": true,
+          "Name": "MCP CMD B",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/alt_interv",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 8"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "2188b3f5-e496-4e6a-a554-bf32976b1245",
+          "Active": true,
+          "Name": "MCP ALT INTV",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/change_over_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 1"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "78943c80-33b1-4b80-a1c7-2c5909cb2bac",
+          "Active": true,
+          "Name": "MCP C/O button",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/flight_director_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 33"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "0ab02537-c7a8-43f3-ba9e-a9d553e43666",
+          "Active": true,
+          "Name": "EFIS FD Captain",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/autopilot/flight_director_fo_toggle",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 33"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "ab528604-f9aa-4539-a6de-967732dbcd78",
+          "Active": true,
+          "Name": "EFIS FD First Officer",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/sta_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 34"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 34",
+          "GUID": "6446ffb3-7235-4208-8f05-e70378d4e4ad",
+          "Active": true,
+          "Name": "EFIS STA",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/data_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 35"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "1069e062-1a26-4b8e-bfb4-227bcbd369e6",
+          "Active": true,
+          "Name": "EFIS DATA",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/wpt_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 36"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 36",
+          "GUID": "4a9a2537-8dd9-4e54-a869-329945c8c3d0",
+          "Active": true,
+          "Name": "EFIS WPT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/tfc_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 37"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "1fbcfa3a-17cb-4486-a4be-e602f191bb38",
+          "Active": true,
+          "Name": "EFIS TFC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/terr_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 38"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "e7751c3d-f60b-4e35-9665-d9785c7330c0",
+          "Active": true,
+          "Name": "EFIS TERR",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/arpt_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 39"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "1ef484a8-c3db-4983-9b8e-59d30113f821",
+          "Active": true,
+          "Name": "EFIS ARPT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/wxr_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 40"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 40",
+          "GUID": "c4d81db6-2109-4e5f-9a8f-01ba2f959a7e",
+          "Active": true,
+          "Name": "EFIS WXR",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/push_button/std_press",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 41"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "dad51553-5f23-4c75-ba55-7e629c92da02",
+          "Active": true,
+          "Name": "EFIS Baro STD",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/pilot/barometer_down",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 42"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "7e7fff7d-363c-49e3-abba-73eb72c61cc5",
+          "Active": true,
+          "Name": "EFIS Baro Down",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/pilot/barometer_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 43"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "39af881d-92a9-4cac-a8af-eefc4d65d36e",
+          "Active": true,
+          "Name": "EFIS Baro Up",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/capt/baro_in_hpa_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 44"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 44",
+          "GUID": "8da4953a-2852-48fc-ba86-ffccd0c6671f",
+          "Active": true,
+          "Name": "EFIS hPa/inHg",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/pfd/dh_pilot_dn",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 45"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 45",
+          "GUID": "14c79def-dbc3-4517-ad2f-a5da630fa666",
+          "Active": true,
+          "Name": "EFIS Mins Down",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/pfd/dh_pilot_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 46"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 46",
+          "GUID": "de12dbc3-ae6e-47f3-9804-0d86e0b94503",
+          "Active": true,
+          "Name": "EFIS Mins Up",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/EFIS_control/cpt/minimums_up",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 47"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 47",
+          "GUID": "912bcf3f-b242-4a6e-a8f5-ca8d01b2c6fd",
+          "Active": true,
+          "Name": "EFIS Mins RADIO/BARO",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS_control/capt/map_mode_pos",
+              "Expression": "0"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 48"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "c897fb3c-511a-4c73-8a8e-c6b80fde6c2a",
+          "Active": true,
+          "Name": "EFIS ND Mode APP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS_control/capt/map_mode_pos",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 49"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "5ce5d45b-0d8d-45e5-ae99-5dd15b62e48f",
+          "Active": true,
+          "Name": "EFIS ND Mode MAP",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS_control/capt/map_mode_pos",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 50"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "3778c888-9b2e-4c94-ab22-837803d9aec6",
+          "Active": true,
+          "Name": "EFIS ND Mode PLN",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "1"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 51"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "2f1ebb97-f7eb-4bd4-9b8a-c1e49b858791",
+          "Active": true,
+          "Name": "EFIS Range 10",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "2"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 52"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "34bd4a25-8b2b-4252-b576-4b6b5321f4a5",
+          "Active": true,
+          "Name": "EFIS Range 20",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "3"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 53"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "ed9d91ec-ca88-46a6-ae84-cc67779a2150",
+          "Active": true,
+          "Name": "EFIS Range 40",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "4"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 54"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "b9dca9cd-3df5-4873-b05b-7efc63db6a23",
+          "Active": true,
+          "Name": "EFIS Range 80",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "5"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 55"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "5395d9bd-a6ee-404a-af74-74aec3ff3c66",
+          "Active": true,
+          "Name": "EFIS Range 160",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "DataRef",
+              "Path": "laminar/B738/EFIS/capt/map_range",
+              "Expression": "6"
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 56"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "d4232b27-32f4-464c-b2aa-b0cf43c9b10c",
+          "Active": true,
+          "Name": "EFIS Range 320",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_1L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 1"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 1",
+          "GUID": "e40de867-6cef-4788-b106-938eb9a378ea",
+          "Active": true,
+          "Name": "FMC LSK 1L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_2L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 2"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 2",
+          "GUID": "07c4d77e-67f0-4dd0-adf2-d48e7df5b446",
+          "Active": true,
+          "Name": "FMC LSK 2L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_3L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 3"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 3",
+          "GUID": "f27ea032-edef-473c-bbee-f2669859466b",
+          "Active": true,
+          "Name": "FMC LSK 3L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_4L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 4"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 4",
+          "GUID": "ea22c217-a096-4cfa-9f20-5bdd7850b730",
+          "Active": true,
+          "Name": "FMC LSK 4L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_5L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 5"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 5",
+          "GUID": "a7aa6a24-cc9b-4059-8a75-d179d3fd1278",
+          "Active": true,
+          "Name": "FMC LSK 5L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_6L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 6"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 6",
+          "GUID": "c4b00dc1-e60f-4987-92ff-7638df194970",
+          "Active": true,
+          "Name": "FMC LSK 6L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_1R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 7",
+          "GUID": "9a9f1669-56ab-4876-842f-60a0a32c8df6",
+          "Active": true,
+          "Name": "FMC RSK 1R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_2R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 8"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 8",
+          "GUID": "7d03b605-3c4e-47ec-bd84-bacd4ac8f162",
+          "Active": true,
+          "Name": "FMC RSK 2R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_3R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 9"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 9",
+          "GUID": "92c0e671-cc46-4dcb-8096-5832436e6ec2",
+          "Active": true,
+          "Name": "FMC RSK 3R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_4R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 10"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 10",
+          "GUID": "0710bc7b-1f6f-46e0-9ed8-5805e712aaad",
+          "Active": true,
+          "Name": "FMC RSK 4R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_5R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 11"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 11",
+          "GUID": "582a20d9-6776-4900-8393-e4134ecd9c69",
+          "Active": true,
+          "Name": "FMC RSK 5R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_6R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 12"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 12",
+          "GUID": "68176bfa-37aa-449f-89cd-9ae210f62514",
+          "Active": true,
+          "Name": "FMC RSK 6R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_init_ref",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 13"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 13",
+          "GUID": "fb8002bb-b4dd-4854-8df0-4f71491acfec",
+          "Active": true,
+          "Name": "FMC INIT REF",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_rte",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 14"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 14",
+          "GUID": "129299a4-3b58-4871-a85d-4f2320fed854",
+          "Active": true,
+          "Name": "FMC RTE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_clb",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 15"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 15",
+          "GUID": "4b8f53b3-de74-4704-a6f1-bee09e84c934",
+          "Active": true,
+          "Name": "FMC CLB",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_crz",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 16"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 16",
+          "GUID": "9e9000c3-85b8-429b-a4f6-397200650fc3",
+          "Active": true,
+          "Name": "FMC CRZ",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_des",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 17"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 17",
+          "GUID": "85e987bf-44e8-46c9-8edb-0cc459679dfc",
+          "Active": true,
+          "Name": "FMC DES",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_exec",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 18"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 18",
+          "GUID": "5b1199ec-a947-44b4-9539-0bd35a54bbb1",
+          "Active": true,
+          "Name": "FMC EXEC",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_dep_app",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 19"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 19",
+          "GUID": "e64a6b0d-4f17-4649-91ce-ff4625e6916b",
+          "Active": true,
+          "Name": "FMC DEP ARR",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_legs",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 20"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 20",
+          "GUID": "4451c7b9-96c8-4657-89f2-02251466706d",
+          "Active": true,
+          "Name": "FMC LEGS",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_fix",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 21"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 21",
+          "GUID": "d483825e-58b6-4487-b8f8-04d606f2b5c1",
+          "Active": true,
+          "Name": "FMC FIX",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_hold",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 22"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 22",
+          "GUID": "f7b78cbe-35a6-4f04-8cfa-df4ed66eba58",
+          "Active": true,
+          "Name": "FMC HOLD",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_prog",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 23"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 23",
+          "GUID": "18526664-fcc4-4b66-b689-88525fed5b2a",
+          "Active": true,
+          "Name": "FMC PROG",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_menu",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 25"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 25",
+          "GUID": "e41d96db-6ade-42f1-9c88-822e2f060532",
+          "Active": true,
+          "Name": "FMC MENU",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_n1_lim",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 27"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 27",
+          "GUID": "e4729bfb-b829-43d0-b2ec-f71b03c9a4c3",
+          "Active": true,
+          "Name": "FMC N1 LIMIT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_SP",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 28"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 28",
+          "GUID": "239d24c8-c25c-49d0-80e9-b4bbb32d6466",
+          "Active": true,
+          "Name": "FMC SPACE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_prev_page",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 29"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 29",
+          "GUID": "9fc9ea94-e54e-47b0-9ad1-ef756bb38a87",
+          "Active": true,
+          "Name": "FMC PREV PAGE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_next_page",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 31"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 31",
+          "GUID": "914a072b-3413-4aff-9051-4fe72839fb68",
+          "Active": true,
+          "Name": "FMC NEXT PAGE",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_1",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 33"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 33",
+          "GUID": "6cfcf98d-1f48-439e-9dba-15ba6f644bb6",
+          "Active": true,
+          "Name": "FMC Key 1",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_2",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 34"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 34",
+          "GUID": "a5b5b30e-2cd3-4140-b5d9-11b23290b51b",
+          "Active": true,
+          "Name": "FMC Key 2",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_3",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 35"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 35",
+          "GUID": "5a3065a1-07cb-4044-b411-5965a7edfea5",
+          "Active": true,
+          "Name": "FMC Key 3",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_4",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 36"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 36",
+          "GUID": "afdd8f13-1f38-42ce-a7fb-95fd3fdd3f43",
+          "Active": true,
+          "Name": "FMC Key 4",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_5",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 37"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 37",
+          "GUID": "1743830b-fdff-44bd-aca1-47db3c59a3d6",
+          "Active": true,
+          "Name": "FMC Key 5",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_6",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 38"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 38",
+          "GUID": "a0617ca8-aa3f-4914-a10c-271539cd9b5e",
+          "Active": true,
+          "Name": "FMC Key 6",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_7",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 39"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 39",
+          "GUID": "d4849f39-68bf-4c6d-beaa-38d5d4196404",
+          "Active": true,
+          "Name": "FMC Key 7",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_8",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 40"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 40",
+          "GUID": "674eed0c-d7a8-4225-886a-e11fd21539df",
+          "Active": true,
+          "Name": "FMC Key 8",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_9",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 41"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 41",
+          "GUID": "17802411-672d-4dbf-a649-123c4566f171",
+          "Active": true,
+          "Name": "FMC Key 9",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_period",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 42"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 42",
+          "GUID": "317f1ba5-a230-452d-9778-b92be0cc08a4",
+          "Active": true,
+          "Name": "FMC Key Decimal",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_0",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 43"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 43",
+          "GUID": "c8194ac9-be70-4e18-95c1-af521c9cd74e",
+          "Active": true,
+          "Name": "FMC Key 0",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_minus",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 44"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 44",
+          "GUID": "088e2336-c9dd-4aad-82a2-15142a60f5a4",
+          "Active": true,
+          "Name": "FMC Key +/-",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_slash",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 71"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 71",
+          "GUID": "ab141f51-fb78-4ab4-be48-a309f883ad7a",
+          "Active": true,
+          "Name": "FMC Key Slash",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_del",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 72"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 72",
+          "GUID": "ec0dc5ae-edd3-494b-91f6-7561ecc2c25c",
+          "Active": true,
+          "Name": "FMC Key DEL",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_clr",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 74"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 74",
+          "GUID": "b25772e0-e7d3-42d9-b565-6256df6a6a64",
+          "Active": true,
+          "Name": "FMC Key CLR",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_A",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 45"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 45",
+          "GUID": "fe0aaefb-8673-469c-b7b7-d4f23daf6f17",
+          "Active": true,
+          "Name": "FMC Key A",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_B",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 46"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 46",
+          "GUID": "169670b1-2825-4d7f-8fcd-fb395e1e6190",
+          "Active": true,
+          "Name": "FMC Key B",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_C",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 47"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 47",
+          "GUID": "f67d4b10-ef86-447d-a6a7-d4e28ccff567",
+          "Active": true,
+          "Name": "FMC Key C",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_D",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 48"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 48",
+          "GUID": "76f24d7c-e37b-49c7-bb68-6fa2a2457674",
+          "Active": true,
+          "Name": "FMC Key D",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_E",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 49"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 49",
+          "GUID": "53349d00-ec4c-4d68-881f-5696ad494c6a",
+          "Active": true,
+          "Name": "FMC Key E",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_F",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 50"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 50",
+          "GUID": "098019bc-6b1d-4cf3-96f0-f7d7c12d2169",
+          "Active": true,
+          "Name": "FMC Key F",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_G",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 51"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 51",
+          "GUID": "0c9e6e61-6bbc-48ac-957f-e8401bb85acc",
+          "Active": true,
+          "Name": "FMC Key G",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_H",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 52"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 52",
+          "GUID": "24fb5e2f-38d1-4ae6-a909-ea6b87b51eda",
+          "Active": true,
+          "Name": "FMC Key H",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_I",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 53"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 53",
+          "GUID": "459bc9f7-38ff-45ee-80e0-d0caec5fe039",
+          "Active": true,
+          "Name": "FMC Key I",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_J",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 54"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 54",
+          "GUID": "f75176c8-d5b4-49c0-9add-048cd08b49be",
+          "Active": true,
+          "Name": "FMC Key J",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_K",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 55"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 55",
+          "GUID": "450d53c9-dd49-44bf-9da9-88d3dbd21e9a",
+          "Active": true,
+          "Name": "FMC Key K",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_L",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 56"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 56",
+          "GUID": "35050fa9-4646-46b3-8a85-323c08a1d183",
+          "Active": true,
+          "Name": "FMC Key L",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_M",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 57"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 57",
+          "GUID": "25bc704a-3536-44ff-b2c1-eb6328497e9f",
+          "Active": true,
+          "Name": "FMC Key M",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_N",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 58"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 58",
+          "GUID": "661f85e1-4b39-43a1-bbd5-fce9ea34af85",
+          "Active": true,
+          "Name": "FMC Key N",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_O",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 59"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 59",
+          "GUID": "8b8e3a91-1a18-4674-af36-bfcd25fba08b",
+          "Active": true,
+          "Name": "FMC Key O",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_P",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 60"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 60",
+          "GUID": "21409ea8-b504-4788-844f-790be96bfa18",
+          "Active": true,
+          "Name": "FMC Key P",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_Q",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 61"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 61",
+          "GUID": "105bd2a5-c1a2-4fa4-b19d-933415a50223",
+          "Active": true,
+          "Name": "FMC Key Q",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_R",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 62"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 62",
+          "GUID": "b7789b2f-040b-436d-b81c-3c5e8bd10ba8",
+          "Active": true,
+          "Name": "FMC Key R",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_S",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 63"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 63",
+          "GUID": "96b5626d-d8b2-488d-9c8b-1de9035b4b01",
+          "Active": true,
+          "Name": "FMC Key S",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_T",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 64"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 64",
+          "GUID": "01ae3488-5d48-40a8-ad9f-27d6f79d5a0a",
+          "Active": true,
+          "Name": "FMC Key T",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_U",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 65"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 65",
+          "GUID": "dfb0e7ac-4852-4825-b770-82293c010051",
+          "Active": true,
+          "Name": "FMC Key U",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_V",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 66"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 66",
+          "GUID": "430421c4-5816-4e9c-82f6-2111663da1c2",
+          "Active": true,
+          "Name": "FMC Key V",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_W",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 67"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 67",
+          "GUID": "deffa538-05a0-41f9-a949-604aa1af1c2c",
+          "Active": true,
+          "Name": "FMC Key W",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_X",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 68"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 68",
+          "GUID": "0cf1a6fd-908a-4723-8f83-c3ce38ae6ccc",
+          "Active": true,
+          "Name": "FMC Key X",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_Y",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 69"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 69",
+          "GUID": "412a2905-7730-4862-b1c0-3f12226bdda1",
+          "Active": true,
+          "Name": "FMC Key Y",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_Z",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 70"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 70",
+          "GUID": "31e215f2-f1f5-4cb2-9308-aec4660e6788",
+          "Active": true,
+          "Name": "FMC Key Z",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        }
+      ]
+    }
+  ],
+  "Sim": "xplane",
+  "Aircraft": [],
+  "Features": {
+    "FSUIPC": false,
+    "ProSim": false
+  },
+  "_version": "0.9"
+}
