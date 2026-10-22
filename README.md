@@ -9,6 +9,7 @@ These profiles are built for the following WinWing panels:
 - **FCU-320** (Flight Control Unit)
 - **EFIS-320L** (Electronic Flight Instrument System, Captain side)
 - **MCDU-32 Captain** (Multi-Function Control & Display Unit)
+- **AGP** (Autobrake & Gear Panel) — Falcon 8X profile only
 
 Since the hardware carries Airbus labeling (A320 FCU layout, Airbus MCDU function keys, etc.), buttons are remapped to the closest equivalent function on each Boeing/MD aircraft.
 
@@ -175,6 +176,115 @@ All CDU button inputs write `1` to the `757Avionics/CDU/...` dataref (the FF757 
 - **A/THR Toggle:** The MD-80's autothrottle required a creative dual-preconditioned approach — two config items that check current state before writing, effectively creating a toggle from a non-toggle dataref.
 - **Baro Adjustment:** Uses pre-computed MobiFlight output values fed back into input expressions for smooth baro knob operation.
 - **inHg/hPa Display:** Implements a MobiFlight variable-based toggle to switch the baro display unit, since the MD-80 doesn't expose this as a simple dataref.
+
+---
+
+## Aerobask Falcon 8X (`aerobask-falcon-8x/`)
+
+**Aircraft:** [Aerobask Falcon 8X](https://www.aerobask.com/) (X-Plane 12)
+
+The Falcon 8X has a Guidance Panel (GP) instead of an MCP/FCU, and its EASy displays are driven from the MKB/CCD rather than an EFIS panel. The aircraft logic is encrypted (SASL), so all commands and datarefs below were taken from the cockpit manipulators and validated against the running sim.
+
+### What's Mapped
+
+**196 total config items** (67 outputs, 129 inputs) across 3 devices: FCU-320 + EFIS-320L, MCDU-32 Captain, and AGP. Device names and button ids were checked against MobiFlight's WinWing definitions (`Joysticks/winwing/*.joystick.json` and `src/MobiFlightWwFcu/WinCtrl*Controller.cs`).
+
+#### FCU → Guidance Panel — 25 inputs
+
+| FCU Control | Falcon 8X Function | Command |
+|-------------|--------------------|---------|
+| SPD knob | Speed target | `aerobask/otto/spd_up` / `spd_dn` |
+| SPD push / pull | Speed FMS / MAN | `aerobask/otto/at_man_fms_fms` / `_man` |
+| SPD/MACH | KTS/MACH toggle | `sim/autopilot/knots_mach_toggle` |
+| HDG knob | Heading/track target | `sim/autopilot/heading_up` / `heading_down` |
+| HDG push / pull | HDG SYNC / HDG mode | `sim/autopilot/heading_sync` / `heading` |
+| TRK/FPA | HDG/TRK selector | `aerobask/otto/hdg_trk` |
+| LOC | LNAV | `aerobask/otto/ap_nav` |
+| APPR | APP | `aerobask/otto/ap_app` |
+| ALT knob | Altitude target | `sim/autopilot/altitude_up` / `altitude_down` |
+| ALT push / pull | VNAV / CLB | `sim/autopilot/vnav` / `level_change` |
+| ALT 100 / 1000 | ALT FT selector | `aerobask/otto/hun_tho_hun` / `hun_tho_tho` |
+| V/S knob | VS/PATH thumbwheel | `sim/autopilot/vertical_speed_up` / `_down` |
+| V/S push / pull | ALT hold / VS mode | `sim/autopilot/altitude_hold` / `vertical_speed` |
+| AP1, AP2 | AP engage/disengage | `sim/autopilot/servos_toggle` |
+| A/THR | AT engage/disengage | `sim/autopilot/autothrottle_toggle` |
+
+**Outputs:**
+- **SPD:** dashes in FMS speed mode (as on the real GP); in MAN, the selected speed or Mach from `sim/cockpit2/autopilot/airspeed_dial_kts_mach`.
+- **HDG:** the Falcon publishes no dataref for its selected heading, so the window shows a value tracked by MobiFlight. It shows dashes until you **push the HDG knob** (HDG SYNC, which also sets the tracked value to the current heading); after that each knob click moves it ±1°. Heading changes made with the mouse in the cockpit are not seen, so push the knob again to re-sync.
+- **ALT:** the ASEL from `aerobask/otto/knob_alt_sel` (ASEL ÷ 100, wrapping at 360, so FL370 reads 10). For ASEL of 36,000 ft and above, `sim/cockpit2/autopilot/altitude_dial_ft` is used to pick between the two candidates.
+- **V/S:** dashes unless VS mode is active.
+- **Dots:** SPD = FMS speed, HDG = LNAV armed/active, ALT = VNAV armed/active.
+- **LEDs** (from `aerobask/otto/lit_*`): AP1 = AP, A/THR = AT, LOC = LNAV, APPR = APP.
+- **Brightness:** gated on DC bus power; the backlight follows the GP panel-lights knob.
+
+#### EFIS-320L — 23 inputs + 4 outputs
+
+| EFIS Control | Falcon 8X Function | Dataref/Command |
+|--------------|--------------------|-----------------|
+| FD (33) | FD/TD pilot (cycles FD → TD → FD+TD → OFF) | `aerobask/otto/fd_td_pilot` |
+| BARO push / pull (40/41) | STD on / off | `aerobask/baro/std_pilot` (gated on `aerobask/baro/1/is_std`) |
+| BARO knob (42/43) | Pilot baro setting | `sim/instruments/barometer_down` / `_up` |
+| inHg / hPa (44/45) | Pilot baro unit | `aerobask/baro/1/is_inhg` = 1 / 0 |
+| CSTR (35) | MKB: CRS edit | `aerobask/mkb/left/goto_crs` |
+| WPT (36) | MKB: DIRECT-TO | `aerobask/mkb/left/goto_dirto` |
+| VOR.D (37) | MKB: NAV page | `aerobask/mkb/left/goto_nav` |
+| NDB (38) | MKB: TRFC page | `aerobask/mkb/left/goto_trfc` |
+| ARPT (39) | MKB: SHOW window | `aerobask/mkb/left/goto_show` |
+| ND mode (46–50) | *Unverified* | `sim/cockpit2/EFIS/map_mode` |
+| ND range (51–56) | *Unverified* | `sim/cockpit2/EFIS/map_range` |
+
+**Outputs:** FD LED (FD/TD on); QNH in inHg or hPa following the aircraft's own unit setting, and "Std" when STD is selected.
+
+#### MCDU → MKB (left multifunction keyboard) — 63 inputs
+
+The Falcon's EASy FMS has no CDU screen (flight plans live on the MDU, driven by the cursor), so the MCDU acts as the **MKB keyboard** and its screen stays blank. All keys send `aerobask/mkb/left/...` commands.
+
+| MCDU Key | MKB Function |
+|----------|--------------|
+| A–Z, 0–9, `.`, `/`, SP | Same key |
+| +/- | Minus |
+| CLR | CLR/DEL |
+| OVFY | ENTER |
+| Blank L / Blank R | SHIFT / SWAP |
+| ← / → | Cursor left / right |
+| LSK 1L–6L | VHF, NAV, XPDR, ATC, HF, SAT pages |
+| LSK 1R–6R | CRS edit, DIRECT-TO, SHOW window, TRFC page, CHECKLIST window, XPDR IDENT |
+| DIR / RAD NAV / ATC COMM | DIRECT-TO / NAV page / ATC page |
+| MCDU MENU / AIRPORT | CHECKLIST window / SHOW window |
+
+#### AGP (Autobrake & Gear Panel) — 14 inputs + 28 outputs
+
+| AGP Control | Falcon 8X Function | Dataref/Command |
+|-------------|--------------------|-----------------|
+| Gear lever UP / DOWN | Landing gear | `sim/flight_controls/landing_gear_up` / `_down` |
+| AUTO BRK LO | Taxi light toggle | `sim/lights/taxi_lights_toggle` |
+| AUTO BRK MED | Both landing lights ON ↔ OFF | `aerobask/lights/ldg_left` / `ldg_right` = 2 / 0 |
+| AUTO BRK MAX | Both landing lights PULSE ↔ OFF | `aerobask/lights/ldg_left` / `ldg_right` = 1 / 0 |
+| A/SKID & N/W STRG ON / OFF | Nosewheel steering on / off (synced with the cockpit NWS button) | `sim/flight_controls/nwheel_steer_toggle` |
+| CHR | Chrono start → stop → reset | `sim/instruments/chrono1_cycle` |
+| RST | Chrono reset | `sim/instruments/chrono1_reset` |
+| ET RUN / STP / RST | Elapsed timer run / stop / reset | `sim/instruments/elapsed1_start_stop` / `_reset` |
+
+**Outputs:**
+- **Gear lights:** green = down and locked, red UNLK = in transit (from `sim/flightmodel2/gear/deploy_ratio`; columns L / NOSE / R). The lever's red arrow uses `sim/cockpit2/annunciators/gear_unsafe`.
+- **Lights:** LO is lit when the taxi light is on, MED when the landing lights are ON, and MAX while they are on PULSE. On PULSE, the green DECEL light above MAX also blinks, following the real left landing light (`sim/flightmodel2/lights/landing_lights_brightness_ratio[1]`), so it matches the Falcon's wig-wag rate (about 1.5 s per left/right cycle).
+- **Clock:** UTC = sim zulu time, CHR = X-Plane chrono #1 (mm:ss), ET = X-Plane elapsed timer #1 (hh:mm). CHR and ET are blank when reset.
+- **Brightness:** the backlight follows the GP panel-lights knob; LCD and LEDs are power-gated.
+
+### Not Mapped / Limitations
+
+| Item | Reason |
+|------|--------|
+| EXPED (7), METRIC (8), LS (34), NAV source selectors (57–62) | No natural Falcon 8X equivalent |
+| ND mode / range | The EASy PDU format and range live in encrypted SASL code; mapped to the X-Plane generic EFIS datarefs, which may have no effect |
+| VS/FPA (PATH) display | V/S window always shows ft/min |
+| HDG window | Tracked value, not read from the aircraft (see Outputs). Re-sync with an HDG knob push after using the mouse |
+| MCDU screen, PROG/PERF/INIT/DATA/F-PLN/FUEL PRED/SEC F-PLN, ↑/↓, BRT/DIM | EASy has no CDU page equivalent |
+| Autobrake | The Falcon 8X has no autobrake, so the AUTO BRK buttons drive the taxi and landing lights instead |
+| Landing lights | Driven through `aerobask/lights/ldg_left` / `ldg_right` (0 = OFF, 1 = PULSE, 2 = ON). The `sw_landing_*` datarefs are only the switch animation and ignore writes |
+| AGP CHR/ET vs. the Falcon's own PDU timer | The AGP uses X-Plane's chrono/elapsed timers; the Falcon's ET button (`aerobask/easy/et_left`) keeps its own timer |
+| BRK FAN, TERR ON ND, DATE, UTC selector, clock set knobs | No Falcon 8X equivalent |
 
 ---
 
