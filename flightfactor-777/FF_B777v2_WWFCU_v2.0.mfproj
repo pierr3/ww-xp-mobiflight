@@ -2043,13 +2043,13 @@
             "String": null
           },
           "Device": {
-            "Name": "Altitude Value",
-            "Address": "Altitude Value",
+            "Name": "inHg Value Left",
+            "Address": "inHg Value Left",
             "Lines": [],
             "Type": "LcdDisplay"
           },
           "DeviceType": "LcdDisplay",
-          "DeviceName": "Altitude Value",
+          "DeviceName": "inHg Value Left",
           "GUID": "0a561ea8-64c9-472c-b6d6-04e44df2dd65",
           "Active": true,
           "Name": "EFIS QNH Value (inHg)",
@@ -2059,7 +2059,7 @@
             "Items": [
               {
                 "Type": "Transformation",
-                "Expression": "Round($*100, 0)",
+                "Expression": "Round($, 2)",
                 "Active": true
               }
             ]

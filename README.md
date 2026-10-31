@@ -167,6 +167,8 @@ The 777 EFIS panel has more controls than the Airbus EFIS, so several selector p
 | Range 10 / 20 / 40 (51–53) | Range down | `cptHsiRangeSwitch_switch-` |
 | Range 80 / 160 / 320 (54–56) | Range up | `cptHsiRangeSwitch_switch+` |
 
+**Outputs:** QNH on the EFIS display, in inHg (`sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot`).
+
 #### MCDU → 777 CDU — 69 inputs + 1 output
 
 The screen is drawn by MobiFlight's bundled `flightfactor_777v2.py` script. The CDU EXEC light (`1-sim/ckpt/lamps/cduCptAct`) drives the MCDU **STATUS** LED.
@@ -201,7 +203,6 @@ The screen is drawn by MobiFlight's bundled `flightfactor_777v2.py` script. The 
 | ATC COMM, DIM, ↑ / ↓, OVFY | No 777 CDU key left to map |
 | NAV source selectors (57–62) | Not mapped |
 | ND mode / range knobs | Step the 777 knobs one click per position, so turn them one notch at a time |
-| `EFIS QNH Value (inHg)` output | Writes to the FCU **Altitude** window with no precondition, so it competes with the altitude display |
 | `VOICE Recognition` (Orion button 11) | Present but disabled |
 
 ---
