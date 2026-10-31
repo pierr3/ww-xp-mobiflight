@@ -31,7 +31,10 @@
           "Active": true,
           "Name": "Airspeed_Mach_Value",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Preconditions": [
             {
               "Type": "config",
@@ -62,6 +65,11 @@
                 "Active": true
               }
             ]
+          },
+          "RawValue": "0.7989802360534668",
+          "Value": "0.799",
+          "Status": {
+            "Precondition": "not satisfied"
           }
         },
         {
@@ -88,7 +96,12 @@
           "Active": true,
           "Name": "Heading Value",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "156",
+          "Value": "156"
         },
         {
           "Source": {
@@ -114,7 +127,10 @@
           "Active": true,
           "Name": "Airspeed Value",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Preconditions": [
             {
               "Type": "config",
@@ -145,6 +161,11 @@
                 "Active": true
               }
             ]
+          },
+          "RawValue": "0.7989802360534668",
+          "Value": "1",
+          "Status": {
+            "Precondition": "not satisfied"
           }
         },
         {
@@ -171,7 +192,12 @@
           "Active": true,
           "Name": "Altitude Value",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "31000",
+          "Value": "31000"
         },
         {
           "Source": {
@@ -197,7 +223,10 @@
           "Active": true,
           "Name": "V/S Value",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Preconditions": [
             {
               "Type": "config",
@@ -218,6 +247,11 @@
                 "Active": true
               }
             ]
+          },
+          "RawValue": "0",
+          "Value": "0",
+          "Status": {
+            "Precondition": "not satisfied"
           }
         },
         {
@@ -244,7 +278,10 @@
           "Active": true,
           "Name": "VNAV-Mode Dot",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -267,7 +304,9 @@
               "Placeholder": "/",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0",
+          "Value": "1"
         },
         {
           "Source": {
@@ -293,7 +332,10 @@
           "Active": true,
           "Name": "SPD Managed Dot",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -310,7 +352,9 @@
               "Placeholder": "#",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0",
+          "Value": "1"
         },
         {
           "Source": {
@@ -336,7 +380,10 @@
           "Active": true,
           "Name": "HDG/LNAV Dot",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -359,7 +406,9 @@
               "Placeholder": "/",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "2",
+          "Value": "1"
         },
         {
           "Source": {
@@ -385,7 +434,10 @@
           "Active": true,
           "Name": "SPD_Dashed",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -402,7 +454,9 @@
               "Placeholder": "#",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0",
+          "Value": "1"
         },
         {
           "Source": {
@@ -428,7 +482,10 @@
           "Active": true,
           "Name": "VS_Dashed",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -437,7 +494,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "0",
+          "Value": "1"
         },
         {
           "Source": {
@@ -463,7 +522,12 @@
           "Active": true,
           "Name": "IAS/Mach Mode",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "1",
+          "Value": "1"
         },
         {
           "Source": {
@@ -489,7 +553,10 @@
           "Active": true,
           "Name": "LCD_Brightness USE OH GLARESHIELD KNOB!!!",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -506,7 +573,9 @@
               "Placeholder": "#",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0.05000000074505806",
+          "Value": "5.00000007450581"
         },
         {
           "Source": {
@@ -532,7 +601,10 @@
           "Active": true,
           "Name": "Backlight_Brightness",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -549,7 +621,9 @@
               "Placeholder": "#",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "Source": {
@@ -576,7 +650,10 @@
           "Active": true,
           "Name": "LOC LED",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -585,7 +662,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "Source": {
@@ -612,7 +691,12 @@
           "Active": true,
           "Name": "AP1 LED",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "0.004999999888241291",
+          "Value": "0.004999999888241291"
         },
         {
           "Source": {
@@ -639,7 +723,12 @@
           "Active": true,
           "Name": "AP2 LED",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "Source": {
@@ -666,7 +755,10 @@
           "Active": true,
           "Name": "ATHR LED",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -675,7 +767,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "1",
+          "Value": "1"
         },
         {
           "Source": {
@@ -702,7 +796,10 @@
           "Active": true,
           "Name": "APPR LED",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -711,7 +808,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "-1",
+          "Value": "0"
         },
         {
           "Source": {
@@ -737,7 +836,10 @@
           "Active": false,
           "Name": "Undefinied",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -772,7 +874,10 @@
           "Active": false,
           "Name": "Undefinied",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Preconditions": [
             {
               "Type": "config",
@@ -820,7 +925,10 @@
           "Active": true,
           "Name": "LED Indicators",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
           "Modifiers": {
             "Items": [
               {
@@ -837,7 +945,9 @@
               "Placeholder": "#",
               "TestValue": "1"
             }
-          ]
+          ],
+          "RawValue": "0",
+          "Value": "100"
         },
         {
           "Source": {
@@ -857,7 +967,9 @@
           "Active": true,
           "Name": "BATTERY ON/OFF",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-"
+          "Controller": null,
+          "RawValue": "1",
+          "Value": "1"
         },
         {
           "Source": {
@@ -877,7 +989,9 @@
           "Active": true,
           "Name": "FD1_Off",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-"
+          "Controller": null,
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "Source": {
@@ -897,7 +1011,7 @@
           "Active": true,
           "Name": "FD2_Off",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -909,7 +1023,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "Source": {
@@ -929,7 +1045,7 @@
           "Active": true,
           "Name": "VNAV Pitch Mode Engaged",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -938,7 +1054,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "5",
+          "Value": "1"
         },
         {
           "Source": {
@@ -958,7 +1076,7 @@
           "Active": true,
           "Name": "VNAV Pitch Mode Armed",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -967,7 +1085,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "-1",
+          "Value": "0"
         },
         {
           "Source": {
@@ -987,7 +1107,7 @@
           "Active": true,
           "Name": "LNAV Roll Mode Armed",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -996,7 +1116,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "-1",
+          "Value": "0"
         },
         {
           "Source": {
@@ -1016,7 +1138,7 @@
           "Active": true,
           "Name": "LNAV Roll Mode Engaged",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -1025,7 +1147,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "2",
+          "Value": "1"
         },
         {
           "Source": {
@@ -1045,7 +1169,7 @@
           "Active": true,
           "Name": "SPD Display Label",
           "Type": "OutputConfigItem",
-          "ModuleSerial": "-",
+          "Controller": null,
           "Modifiers": {
             "Items": [
               {
@@ -1054,7 +1178,9 @@
                 "Active": true
               }
             ]
-          }
+          },
+          "RawValue": "0",
+          "Value": "0"
         },
         {
           "button": {
@@ -1071,13 +1197,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 19"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 19",
           "GUID": "b35697a0-a43f-491a-a5cd-6bc2619299c2",
           "Active": true,
           "Name": "MCP Altitude Inc",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1094,13 +1229,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 18"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 18",
           "GUID": "982c5fcf-2346-44c5-a34d-c6b613b8a8c6",
           "Active": true,
           "Name": "MCP Altitude Dec",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -1117,13 +1259,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 26"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 26",
           "GUID": "76af4f96-4ea5-4c04-b921-320e792710f7",
           "Active": true,
           "Name": "EFIS MODERN ND-Display ARC-Mode",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1140,13 +1291,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 27"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 27",
           "GUID": "ccffaaca-2cee-4eb1-82cb-1c7e253c8769",
           "Active": true,
           "Name": "EFIS MODERN ND-Display PLN-Mode",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1163,13 +1323,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 8"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 8",
           "GUID": "1087ec3c-bc17-43f1-861a-e4ada0404558",
           "Active": true,
           "Name": "MCP AP DISENGAGE Lever",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1186,13 +1355,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 9"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 9",
           "GUID": "bc166695-4335-4821-a6b8-3d7c94a01afa",
           "Active": true,
           "Name": "MCP APP Button",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1209,13 +1387,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 20"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 20",
           "GUID": "7233d3be-67d6-439a-810e-4e77bd09fba0",
           "Active": true,
           "Name": "MCP VNAV ON",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1232,13 +1419,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 21"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 21",
           "GUID": "39328a45-a41f-4d38-a02d-14f2dd040111",
           "Active": true,
           "Name": "MCP FLCH ON",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1255,13 +1451,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 23"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 23",
           "GUID": "86fd34ea-a165-4098-adc5-8dbcf1bb9112",
           "Active": true,
           "Name": "MCP V/S Inc",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -1278,13 +1481,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 22"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 22",
           "GUID": "a7a0eed0-c1ae-4472-992c-038bc43f29a2",
           "Active": true,
           "Name": "MCP V/S Dec",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -1301,13 +1511,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 25"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 25",
           "GUID": "54f6f885-05cb-4291-92bf-869c3c9761cd",
           "Active": true,
           "Name": "MCP V/S ON",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1324,13 +1543,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 24"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 24",
           "GUID": "97d0ee53-aabb-49b1-8bb1-64f76493f7ea",
           "Active": true,
           "Name": "MCP Altitude HOLD Button",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1347,13 +1575,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 15"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 15",
           "GUID": "af647ace-ac11-490f-a3db-2d50fe4ac60b",
           "Active": true,
           "Name": "MCP HDG Inc",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1370,13 +1607,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 14"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 14",
           "GUID": "cf1f5d3e-892c-42a8-a4ed-59947bad885f",
           "Active": true,
           "Name": "MCP HDG Dec",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1393,13 +1639,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 16"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 16",
           "GUID": "146de7fb-9d13-45f3-b918-01de6581b722",
           "Active": true,
           "Name": "MCP LNAV ON/OFF",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1416,13 +1671,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 17"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 17",
           "GUID": "4ebcf744-ffcf-47b6-8806-4606f75eb534",
           "Active": true,
           "Name": "MCP HDG HOLD",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1439,13 +1703,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 11"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 11",
           "GUID": "39c050e0-7b9a-4b3a-9a63-2a5f69e12a1a",
           "Active": true,
           "Name": "MCP SPD Inc",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1462,13 +1735,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 10"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 10",
           "GUID": "af9e86bf-f55e-42f8-a952-201b1773746d",
           "Active": true,
           "Name": "MCP SPD Dec",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -1485,13 +1767,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 12"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 12",
           "GUID": "ac8119be-e39d-4c98-ba57-3756ee89b5ad",
           "Active": true,
           "Name": "MCP SPD Managed",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1508,13 +1799,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 13"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 13",
           "GUID": "aa8aa94b-f794-4a15-8ff0-469d98ca776d",
           "Active": true,
           "Name": "MCP SPD INTV",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1531,13 +1831,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 1"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 1",
           "GUID": "eb7b79e7-e1db-4b19-9d9d-073f1fec7312",
           "Active": true,
           "Name": "MCP SPD/Mach Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1554,13 +1863,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 2"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 2",
           "GUID": "da954256-f6fb-4ce2-8ef5-2299b19dab63",
           "Active": true,
           "Name": "MCP LOC Button",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1577,13 +1895,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 4"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 4",
           "GUID": "5a82b3c7-945c-48ca-9665-2e9ff6c6800c",
           "Active": true,
           "Name": "MCP CMD-L On",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1600,13 +1927,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 5"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 5",
           "GUID": "933dc620-04a9-49c9-b36a-9c605d69049b",
           "Active": true,
           "Name": "MCP CMD-R On",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1623,13 +1959,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 3"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 3",
           "GUID": "1687a12e-8910-479e-9960-43d61d8039c5",
           "Active": true,
           "Name": "MCP HDG Select Button",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1646,13 +1991,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 6"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 6",
           "GUID": "55e7445b-853f-4e13-bc8d-7fd62ec818de",
           "Active": true,
           "Name": "MCP A/T ARMED ON/OFF",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1669,13 +2023,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 7",
           "GUID": "23bdf83c-ab4a-46de-ba85-821639a422fa",
           "Active": true,
           "Name": "MCP FD1 On/Off",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1692,13 +2055,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 7",
           "GUID": "3a1c46a5-f8ea-431f-a535-8e17591585ef",
           "Active": true,
           "Name": "MCP FD2 On/Off",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1715,13 +2087,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 1"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 1",
           "GUID": "49c88e5c-5bcb-4788-b51e-e3f046a56ae9",
           "Active": true,
           "Name": "CDU LSK 1L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1738,13 +2119,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 2"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 2",
           "GUID": "ac9fb7eb-e78e-45bc-a816-69048aad629b",
           "Active": true,
           "Name": "CDU LSK 2L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1761,13 +2151,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 3"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 3",
           "GUID": "ce9030df-c908-432f-983c-139f7f037377",
           "Active": true,
           "Name": "CDU LSK 3L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1784,13 +2183,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 4"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 4",
           "GUID": "237de729-6453-499b-85f2-61396ca68a5a",
           "Active": true,
           "Name": "CDU LSK 4L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1807,13 +2215,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 5"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 5",
           "GUID": "2880749e-3724-4cda-b101-711d5e5a4a7e",
           "Active": true,
           "Name": "CDU LSK 5L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1830,13 +2247,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 6"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 6",
           "GUID": "03d6a4ae-479d-4708-bf47-6bac0c0a2174",
           "Active": true,
           "Name": "CDU LSK 6L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1853,13 +2279,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 7"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 7",
           "GUID": "c052e99c-3bad-4724-8038-db7f13fdcc66",
           "Active": true,
           "Name": "CDU LSK 1R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1876,13 +2311,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 8"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 8",
           "GUID": "767b3f2f-18c1-4edb-8201-55b0ff39257b",
           "Active": true,
           "Name": "CDU LSK 2R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1899,13 +2343,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 9"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 9",
           "GUID": "25543839-8bbf-4d0c-a0b9-6a222cb0ac9d",
           "Active": true,
           "Name": "CDU LSK 3R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1922,13 +2375,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 10"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 10",
           "GUID": "596b793d-d56a-4e97-9e4f-abac63395269",
           "Active": true,
           "Name": "CDU LSK 4R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1945,13 +2407,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 11"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 11",
           "GUID": "1a769458-0831-4491-9709-4237ba47f51d",
           "Active": true,
           "Name": "CDU LSK 5R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1968,13 +2439,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 12"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 12",
           "GUID": "cf3753a4-ce31-4ede-9e6e-680c36c62004",
           "Active": true,
           "Name": "CDU LSK 6R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -1991,13 +2471,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 13"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 13",
           "GUID": "25913931-728f-40e3-9c7b-e3956f8ed855",
           "Active": true,
           "Name": "CDU DIR",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2014,13 +2503,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 14"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 14",
           "GUID": "9c1c2eda-64fa-4838-ad45-9b833dd8dfd0",
           "Active": true,
           "Name": "CDU PROG",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2037,13 +2535,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 15"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 15",
           "GUID": "4b0f6fa6-bedf-4bcb-9dea-a6905c7b26de",
           "Active": true,
           "Name": "CDU CLB",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2060,13 +2567,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 16"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 16",
           "GUID": "e645c0c1-744f-4b0e-8f66-2fa70b62dd4b",
           "Active": true,
           "Name": "CDU INIT REF",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2083,13 +2599,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 17"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 17",
           "GUID": "cc83b8f7-5f20-4e29-ae77-109d1b16c986",
           "Active": true,
           "Name": "CDU CRZ",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2106,13 +2631,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 18"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 18",
           "GUID": "8ae7d10a-b9fd-4137-b913-d225600a2494",
           "Active": true,
           "Name": "CDU EXEC",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2129,13 +2663,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 20"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 20",
           "GUID": "788c1b78-c4a4-4775-9bee-e916a0acc982",
           "Active": true,
           "Name": "CDU RTE",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2152,13 +2695,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 21"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 21",
           "GUID": "c758353d-542c-433c-8bfc-7f7949c4bda7",
           "Active": true,
           "Name": "CDU FIX",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2175,13 +2727,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 22"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 22",
           "GUID": "5f20eecf-e8de-4785-a656-26cca07cea61",
           "Active": true,
           "Name": "CDU DES",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2198,13 +2759,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 23"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 23",
           "GUID": "ad7ef9e3-085c-49d0-a0cb-98f0c39cba22",
           "Active": true,
           "Name": "CDU LEGS",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2221,13 +2791,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 24"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 24",
           "GUID": "ff604f64-6962-4cd6-a091-fe664734ce93",
           "Active": true,
           "Name": "CDU HOLD",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2244,13 +2823,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 25"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 25",
           "GUID": "73446d08-8467-4c59-a99e-b6b3df5f418a",
           "Active": true,
           "Name": "CDU MCDU MENU",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2267,13 +2853,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 27"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 27",
           "GUID": "39d4b242-8ae0-4156-b365-e716aed2a584",
           "Active": true,
           "Name": "CDU DEP ARR",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2290,13 +2885,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 28"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 28",
           "GUID": "4680868e-8f21-4fa0-838e-17cda31b35a3",
           "Active": true,
           "Name": "CDU DELETE",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2313,13 +2915,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 29"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 29",
           "GUID": "73c81f3c-04e5-45d2-9f66-8a80540a53a3",
           "Active": true,
           "Name": "CDU PREV PAGE",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2336,13 +2947,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 31"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 31",
           "GUID": "5def7409-dd38-4d4d-aecc-6debad522b10",
           "Active": true,
           "Name": "CDU NEXT PAGE",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2359,13 +2979,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 33"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 33",
           "GUID": "5e43a531-77e3-4973-a492-770dbb0cee10",
           "Active": true,
           "Name": "CDU Key 1",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2382,13 +3011,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 34"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 34",
           "GUID": "28fae158-62d4-4df9-a6c1-9832b98cf160",
           "Active": true,
           "Name": "CDU Key 2",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2405,13 +3043,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 35"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 35",
           "GUID": "8f859184-21c7-459f-9441-fcece3f9edfa",
           "Active": true,
           "Name": "CDU Key 3",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2428,13 +3075,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 36"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 36",
           "GUID": "ec5b1152-4514-409f-b1a1-6478290dd11d",
           "Active": true,
           "Name": "CDU Key 4",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2451,13 +3107,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 37"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 37",
           "GUID": "b1bf8c75-2e00-4c76-b528-e424744122ce",
           "Active": true,
           "Name": "CDU Key 5",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2474,13 +3139,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 38"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 38",
           "GUID": "b05fba50-80cd-456e-b06d-83628eb6d0ae",
           "Active": true,
           "Name": "CDU Key 6",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2497,13 +3171,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 39"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 39",
           "GUID": "996c76eb-6a47-4104-b308-5525bd092051",
           "Active": true,
           "Name": "CDU Key 7",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2520,13 +3203,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 40"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 40",
           "GUID": "305e68a5-1c70-4a47-b7d7-f7b9711af225",
           "Active": true,
           "Name": "CDU Key 8",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2543,13 +3235,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 41"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 41",
           "GUID": "9c85ffb7-9a11-4b2f-a92a-c5c570fd00cd",
           "Active": true,
           "Name": "CDU Key 9",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2566,13 +3267,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 42"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 42",
           "GUID": "40be74d8-57d4-4f55-92a6-b8bebace08b6",
           "Active": true,
           "Name": "CDU Key .",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2589,13 +3299,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 43"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 43",
           "GUID": "8d549600-0db3-47f5-a508-e1ae78179dfa",
           "Active": true,
           "Name": "CDU Key 0",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2612,13 +3331,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 44"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 44",
           "GUID": "502f349c-e309-4c07-b301-8475198d2d4b",
           "Active": true,
           "Name": "CDU Key +/-",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2635,13 +3361,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 45"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 45",
           "GUID": "b9e26802-ed8a-46fc-8d45-d14b9fe258c4",
           "Active": true,
           "Name": "CDU Key A",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2658,13 +3393,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 46"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 46",
           "GUID": "26aecec3-bd72-4302-9e40-e03278a91c72",
           "Active": true,
           "Name": "CDU Key B",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2681,13 +3425,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 47"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 47",
           "GUID": "146501e2-a598-4491-a8c0-02c0ba7b28bd",
           "Active": true,
           "Name": "CDU Key C",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2704,13 +3457,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 48"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 48",
           "GUID": "f072657f-8a77-4258-a611-310c82dcd200",
           "Active": true,
           "Name": "CDU Key D",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2727,13 +3489,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 49"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 49",
           "GUID": "dfc78ffa-f648-4a31-8e90-b33ff557971c",
           "Active": true,
           "Name": "CDU Key E",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2750,13 +3521,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 50"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 50",
           "GUID": "e3452dec-f8a7-4fbc-b4bf-3abb6a566604",
           "Active": true,
           "Name": "CDU Key F",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2773,13 +3553,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 51"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 51",
           "GUID": "2d2d7826-ff52-489e-890e-4eb4ac3cce05",
           "Active": true,
           "Name": "CDU Key G",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2796,13 +3585,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 52"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 52",
           "GUID": "52a39e46-54b0-4bca-99ea-59929995012f",
           "Active": true,
           "Name": "CDU Key H",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2819,13 +3615,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 53"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 53",
           "GUID": "be4ad1bb-b66a-4508-a26f-25011cbc1269",
           "Active": true,
           "Name": "CDU Key I",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2842,13 +3647,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 54"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 54",
           "GUID": "85f259d6-c30c-4665-8452-a97e66cf5625",
           "Active": true,
           "Name": "CDU Key J",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2865,13 +3679,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 55"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 55",
           "GUID": "46a2e9ef-b06a-4f00-a9b0-1746092233e6",
           "Active": true,
           "Name": "CDU Key K",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2888,13 +3709,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 56"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 56",
           "GUID": "2e5a46ba-62a9-4c31-b324-d40778a808a0",
           "Active": true,
           "Name": "CDU Key L",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2911,13 +3739,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 57"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 57",
           "GUID": "4c08f070-63f9-47d3-958c-ef625a2cc2d8",
           "Active": true,
           "Name": "CDU Key M",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2934,13 +3771,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 58"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 58",
           "GUID": "8fc0526b-954c-4f52-a99d-bcee4693af80",
           "Active": true,
           "Name": "CDU Key N",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -2957,13 +3803,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 59"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 59",
           "GUID": "b8fffc22-645e-48e6-bd22-5aa970625577",
           "Active": true,
           "Name": "CDU Key O",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -2980,13 +3833,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 60"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 60",
           "GUID": "702c3f23-fc63-420a-bd8d-9c75363ab435",
           "Active": true,
           "Name": "CDU Key P",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -3003,13 +3863,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 61"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 61",
           "GUID": "e39dfe79-787a-4845-a419-afce5989b08c",
           "Active": true,
           "Name": "CDU Key Q",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3026,13 +3895,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 62"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 62",
           "GUID": "0349810f-942b-4b83-9f49-74e9f2ae7b3f",
           "Active": true,
           "Name": "CDU Key R",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3049,13 +3927,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 63"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 63",
           "GUID": "5f8a58c4-3076-48b8-a888-8680431b2887",
           "Active": true,
           "Name": "CDU Key S",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3072,13 +3959,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 64"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 64",
           "GUID": "199b9903-c932-4e42-8988-a18cfe07fea9",
           "Active": true,
           "Name": "CDU Key T",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3095,13 +3991,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 65"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 65",
           "GUID": "94eaef4c-1c97-4a5b-8584-a64efda9728d",
           "Active": true,
           "Name": "CDU Key U",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3118,13 +4023,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 66"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 66",
           "GUID": "09e73665-0170-4ea3-80bf-0c630d7460c7",
           "Active": true,
           "Name": "CDU Key V",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3141,13 +4055,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 67"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 67",
           "GUID": "865f851e-cbdb-4e73-b06f-feb8cbcd7d30",
           "Active": true,
           "Name": "CDU Key W",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -3164,13 +4085,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 68"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 68",
           "GUID": "393198a1-d337-42d3-aced-b8195af15aac",
           "Active": true,
           "Name": "CDU Key X",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -3187,13 +4115,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 69"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 69",
           "GUID": "f5eee2bf-dd53-489b-a987-cfb24984ddb7",
           "Active": true,
           "Name": "CDU Key Y",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -3210,13 +4145,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 70"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 70",
           "GUID": "43c65c81-8697-4154-a387-d015a18b14d6",
           "Active": true,
           "Name": "CDU Key Z",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3233,13 +4177,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 71"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 71",
           "GUID": "7640f122-e2e6-42f5-8eb8-66d7ebce7381",
           "Active": true,
           "Name": "CDU Key /",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3256,13 +4209,20 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 72"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 72",
           "GUID": "45a05aef-ba89-4d21-b3b2-eff21649eb34",
           "Active": true,
           "Name": "CDU Key SP",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
         },
         {
           "button": {
@@ -3279,13 +4239,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 74"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 74",
           "GUID": "a88fcded-47eb-444d-954f-e8fe3e05e078",
           "Active": true,
           "Name": "CDU CLR",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 MCDU CAPTAIN / JS-40451660-a558-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3302,13 +4271,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 33"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 33",
           "GUID": "a3469f34-4870-49ac-a16e-f4ea21f2eda8",
           "Active": true,
           "Name": "EFIS FD1 Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3325,13 +4303,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 35"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 35",
           "GUID": "6626f5a7-4d98-4297-8a0c-2b3d6985c5a9",
           "Active": true,
           "Name": "EFIS FPV Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3348,13 +4335,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 36"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 36",
           "GUID": "638ac5e8-7df9-4033-8960-ec1f3c0747ba",
           "Active": true,
           "Name": "EFIS WPT Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3371,13 +4367,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 37"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 37",
           "GUID": "5c2ce981-d9f9-4103-9dc7-f3c1a969393c",
           "Active": true,
           "Name": "EFIS NAV AID Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3394,13 +4399,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 38"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 38",
           "GUID": "f97fb38c-2b5c-427f-b548-e967f3989022",
           "Active": true,
           "Name": "EFIS DATA Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3417,13 +4431,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 39"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 39",
           "GUID": "5c5d1771-c5d7-44d5-aeda-fc979595273d",
           "Active": true,
           "Name": "EFIS ARPT Toggle",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3440,13 +4463,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 40"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 40",
           "GUID": "f6f43e0c-9a2e-4cb2-8aeb-b9265b077396",
           "Active": true,
           "Name": "EFIS Baro STD Set",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3463,13 +4495,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 41"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 41",
           "GUID": "fb39d09f-f98d-40c4-ae68-6732a12855ec",
           "Active": true,
           "Name": "EFIS Baro STD Exit",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3486,13 +4527,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 42"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 42",
           "GUID": "fe7f801b-5174-415c-b40c-16604bfb5aca",
           "Active": true,
           "Name": "EFIS Baro Dec",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -3509,13 +4559,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 43"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 43",
           "GUID": "12da5d8f-0975-45eb-96a7-7eddce38c2a9",
           "Active": true,
           "Name": "EFIS Baro Inc",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -3532,13 +4591,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 46"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 46",
           "GUID": "c6e63157-bdea-45cc-b620-8599385ce34e",
           "Active": true,
           "Name": "EFIS ND Mode APP",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3555,13 +4623,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 47"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 47",
           "GUID": "2fae1df9-af26-4d40-8e69-10e21ea24aff",
           "Active": true,
           "Name": "EFIS ND Mode VOR",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3577,6 +4654,10 @@
             "LongReleaseDelay": 350,
             "HoldDelay": 350,
             "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 48"
           },
           "DeviceType": "Button",
           "DeviceName": "Button 48",
@@ -3584,7 +4665,12 @@
           "Active": true,
           "Name": "EFIS ND Mode MAP",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -3601,13 +4687,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 49"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 49",
           "GUID": "2cf9c4ed-3b7a-47a9-a5a7-799b4730ee6c",
           "Active": true,
           "Name": "EFIS ND Mode MAP (ARC)",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3624,13 +4719,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 50"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 50",
           "GUID": "63c7c5b2-bc59-493f-b63c-a98ce8e35761",
           "Active": true,
           "Name": "EFIS ND Mode PLN",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3647,13 +4751,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 51"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 51",
           "GUID": "f9394cbb-6870-49a6-965d-e932deb831dd",
           "Active": true,
           "Name": "EFIS ND Range 10",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3670,13 +4783,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 52"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 52",
           "GUID": "bd9dcaa2-2f93-4112-a01d-35bcd67cd22f",
           "Active": true,
           "Name": "EFIS ND Range 20",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3693,13 +4815,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 53"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 53",
           "GUID": "4f998eed-b0d0-4877-8ce7-13f23ca1e7c8",
           "Active": true,
           "Name": "EFIS ND Range 40",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "PRESS",
+          "Value": " "
         },
         {
           "button": {
@@ -3716,13 +4847,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 54"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 54",
           "GUID": "ba0a7d7c-a8c9-4cfc-87b7-86b9ebcbdc38",
           "Active": true,
           "Name": "EFIS ND Range 80",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3739,13 +4879,22 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 55"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 55",
           "GUID": "c81ba533-3293-4677-91b7-691ddff6c9f1",
           "Active": true,
           "Name": "EFIS ND Range 160",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
         },
         {
           "button": {
@@ -3762,13 +4911,62 @@
             "HoldDelay": 350,
             "RepeatDelay": 0
           },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 56"
+          },
           "DeviceType": "Button",
           "DeviceName": "Button 56",
           "GUID": "f7a882ce-5858-4186-b9df-c1101cef899d",
           "Active": true,
           "Name": "EFIS ND Range 320",
           "Type": "InputConfigItem",
-          "ModuleSerial": "WINCTRL 32 FCU + 32 EFIS L / JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "RawValue": "RELEASE",
+          "Value": " "
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "1-sim/CDU/L/CDUbrtRotary"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "LCD Percentage",
+            "Address": "LCD Percentage",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "LCD Percentage",
+          "GUID": "98e11de6-58de-48d2-a26d-c9896f2e1c22",
+          "Active": true,
+          "Name": "CDU L Bright",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          },
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "$*100",
+                "Active": true
+              }
+            ]
+          },
+          "RawValue": "0",
+          "Value": "0"
         }
       ]
     }

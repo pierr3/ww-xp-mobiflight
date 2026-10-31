@@ -4646,6 +4646,191 @@
             "Name": "WINCTRL 32 MCDU CAPTAIN",
             "Serial": "JS-40451660-a558-11f0-8001-444553540000"
           }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/fmc1/exec_lights"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 1.0,
+            "String": null
+          },
+          "Device": {
+            "Name": "STATUS",
+            "Pin": "STATUS",
+            "Brightness": 255,
+            "PwmMode": false,
+            "Type": "Output"
+          },
+          "DeviceType": "Output",
+          "DeviceName": "STATUS",
+          "GUID": "a1b2c3d4-1111-4444-8888-000000000002",
+          "Active": true,
+          "Name": "MCDU EXEC Light",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "button": {
+            "onPress": {
+              "Type": "XplaneInputAction",
+              "InputType": "Command",
+              "Path": "laminar/B738/button/fmc1_dep_app",
+              "Expression": ""
+            },
+            "onRelease": null,
+            "onLongRelease": null,
+            "onHold": null,
+            "LongReleaseDelay": 350,
+            "HoldDelay": 350,
+            "RepeatDelay": 0
+          },
+          "Device": {
+            "Type": "Button",
+            "Name": "Button 24"
+          },
+          "DeviceType": "Button",
+          "DeviceName": "Button 24",
+          "GUID": "a1b2c3d4-1111-4444-8888-000000000003",
+          "Active": true,
+          "Name": "FMC AIRPORT",
+          "Type": "InputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 MCDU CAPTAIN",
+            "Serial": "JS-40451660-a558-11f0-8001-444553540000"
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "laminar/B738/EFIS_control/capt/baro_in_hpa"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 0.0,
+            "String": null
+          },
+          "DeviceType": "-",
+          "DeviceName": null,
+          "GUID": "a1b2c3d4-1111-4444-8888-000000000001",
+          "Active": true,
+          "Name": "EFIS Baro hPa Mode",
+          "Type": "OutputConfigItem",
+          "Controller": null
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 29.92,
+            "String": null
+          },
+          "Device": {
+            "Name": "inHg Value Left",
+            "Address": "inHg Value Left",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "inHg Value Left",
+          "GUID": "a1b2c3d4-1111-4444-8888-000000000004",
+          "Active": true,
+          "Name": "EFIS QNH inHg Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a1b2c3d4-1111-4444-8888-000000000001",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "0",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 2)",
+                "Active": true
+              }
+            ]
+          }
+        },
+        {
+          "Source": {
+            "XplaneDataRef": {
+              "Path": "sim/cockpit2/gauges/actuators/barometer_setting_in_hg_pilot"
+            },
+            "Type": "XplaneSource"
+          },
+          "TestValue": {
+            "type": 1,
+            "Float64": 29.92,
+            "String": null
+          },
+          "Device": {
+            "Name": "hPa Value Left",
+            "Address": "hPa Value Left",
+            "Lines": [],
+            "Type": "LcdDisplay"
+          },
+          "DeviceType": "LcdDisplay",
+          "DeviceName": "hPa Value Left",
+          "GUID": "a1b2c3d4-1111-4444-8888-000000000005",
+          "Active": true,
+          "Name": "EFIS QNH hPa Value",
+          "Type": "OutputConfigItem",
+          "Controller": {
+            "Name": "WINCTRL 32 FCU + 32 EFIS L",
+            "Serial": "JS-ae58e6a0-9d7d-11f0-8001-444553540000"
+          },
+          "Preconditions": [
+            {
+              "Type": "config",
+              "Ref": "a1b2c3d4-1111-4444-8888-000000000001",
+              "Serial": null,
+              "Pin": null,
+              "Operand": "=",
+              "Value": "1",
+              "Logic": "and",
+              "Active": true
+            }
+          ],
+          "Modifiers": {
+            "Items": [
+              {
+                "Type": "Transformation",
+                "Expression": "33.8639*$",
+                "Active": true
+              },
+              {
+                "Type": "Transformation",
+                "Expression": "Round($, 0)",
+                "Active": true
+              }
+            ]
+          }
         }
       ]
     }
