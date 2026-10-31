@@ -288,6 +288,20 @@ The Falcon's EASy FMS has no CDU screen (flight plans live on the MDU, driven by
 
 ---
 
+## DWSim ATR 72-600 (`dwsim-atr72-600/`)
+
+**Aircraft:** DWSim (DeltaWing Simulations) ATR 72-600 (X-Plane 12)
+
+Covers the FCU-320 + EFIS-320L, MCDU-32 Captain, AGP and ECAM. The ECAM is laid out like the ATR glareshield panel (VCP arrows / ENT / ESC, NAV range, PROC keys, MFD page keys) rather than following its stickers.
+
+![ATR 72-600 WinWing bindings cheat sheet](dwsim-atr72-600/ATR72-600_cheatsheet.png)
+
+**MCDU screen:** `dwsim_atr72_600.py` mirrors the ATR MCDU onto the WinWing MCDU. Copy it to MobiFlight's `Scripts/Winwing/` folder and add this entry to `Scripts/ScriptMappings.json`:
+
+```json
+{"VendorId": "0x4098", "ProductIds": ["WinwingCDUs"], "AircraftMatchPattern": "(?i)^atr 72-600", "ScriptName": "dwsim_atr72_600.py"}
+```
+
 ## Airbus-to-Boeing/MD Button Mapping Philosophy
 
 Since the WinWing hardware has Airbus labels, here's the general remapping logic:
